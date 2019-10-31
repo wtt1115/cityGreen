@@ -1,7 +1,6 @@
 <!--pages/index/index.wxml-->
-<view>
-<!-- 轮播图 -->
-  <view>
+<view class="container">
+   <view>
     <swiper class="swiper-block" previous-margin="90rpx"  autoplay="{{autoplay}}" indicatorDots="{{indicatorDots}}"  indicator-color="{{defuColor}}"  indicator-active-color="{{actiColor}}" next-margin="90rpx" current="0" bindchange="swiperChange" circular="{{circular}}">
     <block wx:for="{{imgUrls}}" wx:key="{{index}}">
       <swiper-item class="swiper-item">
@@ -10,47 +9,48 @@
     </block>
     </swiper>
   </view>
-  <!-- 套餐 -->
-  <view>
-    <view class="page-section">
-      <view class="page-section-spacing">
-        <view class="igs-flex igs-flex4">
-          <block wx:for="{{setMeal}}" wx:key="{{index}}">
-          <view class="ulList">
-            <view class="liClass">
-            <!-- style="background: url({{item.setMealImg}}) no-repeat" -->
-              <view class="fz20 ftColorfff fontStrong">{{item.setMealType}}套餐</view>
-              <view class="fz24 ftColorfff fontStrong">{{item.setMealAmount}}/年</view>
-            </view>
+    <view class="page-body">
+      <view class="package-content">
+        <view class="package" wx:for="{{packageData}}" wx:key="">
+          <view class="package-l">
+            <view class="package-l-t">{{item.text}}</view>
+            <view class="package-l-b">{{item.price}}</view>
           </view>
-          </block>
+          <view class="package-r">
+            <image class="package-img" src="{{item.iconUrl}}"></image>
+          </view>
         </view>
       </view>
     </view>
-  </view>
-  <!-- tab切换 -->
-  <view class='order'>
-    <view class="swiper-tab">
-    <block wx:for="{{swiperTabList}}" wx:key="{{index}}">
-    <view class="swiper-tab-item {{currentTab === index?'active':''}}" data-current="0" bindtap="clickTab">{{item}}</view>
-    </block>
-    </view>
-    <swiper current="{{currentTab}}" duration="0" bindchange="swiperTab">
-      <swiper-item>
-        <view>代付款</view>
-      </swiper-item>
-      <swiper-item>
-        <view>代发货</view>
-      </swiper-item>
-      <swiper-item>
-        <view>待收货</view>
-      </swiper-item>
-      <swiper-item>
-        <view>待评价</view>
-      </swiper-item>
-      <swiper-item>
-        <view>退款/售后</view>
-      </swiper-item>
+     <scroll-view scroll-x="true" class="tab-h" scroll-left="{{scrollLeft}}">
+        <view class="tab-item {{currentTab==0?'active':''}}"  data-current="0" bindtap="swichNav">全部</view>
+        <view class="tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="swichNav">宣传类</view>
+        <view class="tab-item {{currentTab==2?'active':''}}" data-current="2" bindtap="swichNav">种菜类</view>
+        <view class="tab-item {{currentTab==3?'active':''}}" data-current="3" bindtap="swichNav">做菜类</view>
+        <view class="tab-item {{currentTab==4?'active':''}}" data-current="4" bindtap="swichNav">营养类</view>
+        <view class="tab-item {{currentTab==5?'active':''}}" data-current="5" bindtap="swichNav">青葱</view>
+        <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">全部</view>
+        <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">其他</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
+     style="height:{{winHeight}}rpx">
+        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}" wx:key="index" style="width:auto !important;">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{[1,2,3,4,5,6,7,8]}}" wx:key="*this">
+                    <view class="item-ans">
+                        <view class="avatar">
+                            <image class="img" src=""></image>
+                        </view>
+                        <view class="expertInfo">
+                            <view class="name">欢颜</view>
+                            <view class="tag">知名情感博主</view>
+                            <view class="answerHistory">134个回答，2234人听过 </view>
+                        </view>
+                        <navigator url="/pages/askExpert/expertDetail" class="askBtn">问TA</navigator> 
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
     </swiper>
-  </view>
+
 </view>

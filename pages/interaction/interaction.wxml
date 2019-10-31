@@ -1,2 +1,21 @@
 <!--pages/interaction/interaction.wxml-->
-<text>互动</text>
+<view class="interaction">
+  <view class="interaction_top">
+    <image class="interaction_top_img" src="../../images/interaction/banner_icon.png"></image>
+  </view>
+  <view class="interaction_cont">
+   <block wx:for="{{commandArraylist}}" wx:key="">
+      <view class="interaction_cont_li">
+        <image class="userImg" src="{{item.userUrl}}"></image>
+        <view class="fz32">{{item.username}}</view>
+        <view>{{item.lovePointUser}}</view>
+        <view class="igs-flex igs-flex4">
+          <image class="cont_img" wx:for="{{item.imgUrlLst}}" src="{{item}}"></image>
+        </view>
+        <view class="operation">
+          <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text><image class="operating_btn"  src="../../images/interaction/operating_btn_icon.png"></image>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>

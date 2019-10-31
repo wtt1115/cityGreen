@@ -1,13 +1,15 @@
 {
   "pages": [
+   
+    "pages/index/index",
     "pages/my/my",
     "pages/default/default",
     "pages/join/join",
     "pages/register/register",
-    "pages/index/index",
     "pages/garden/garden",
     "pages/interaction/interaction",
-    "pages/orderDetails/orderDetails"
+    "pages/orderDetails/orderDetails",
+    "pages/details/details"
   ],
   "tabBar": {
     "color": "#000",

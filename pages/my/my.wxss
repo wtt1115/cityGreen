@@ -80,8 +80,8 @@
   background:#fff;
 }
 .menu_img{
-  width:46rpx;
-  height:46rpx;
+  width:50rpx;
+  height:50rpx;
 }
 .myBox_bottom_li{
   box-sizing:border-box;

@@ -14,7 +14,7 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.0.4",
-	"appid": "wx77eafcd4ff91cb6f",
+	"appid": "wxef5ca0f18c34db62",
 	"projectname": "cityGreens",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -39,33 +39,44 @@
 			"currentL": -1,
 			"list": []
 		},
-		"gamePlugin": {
-			"current": -1,
-			"list": []
-		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "我的",
 					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 1,
 					"name": "首页",
 					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
+					"id": 2,
 					"name": "订单详情",
 					"pathName": "pages/orderDetails/orderDetails",
+					"query": "",
 					"scene": null
-				}
+				},
+				{
+					"id": 3,
+					"name": "菜园",
+					"pathName": "pages/garden/garden",
+					"query": "",
+					"scene": null
+				},
+        {
+          "id": 4,
+          "name": "互动",
+          "pathName": "pages/interaction/interaction",
+          "query": "",
+          "scene": null
+        }
 			]
 		}
 	}

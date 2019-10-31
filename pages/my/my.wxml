@@ -1,0 +1,37 @@
+<!--pages/my/my.wxml-->
+<view class="myBox ftColor49">
+  <view class="myBox_top igs-flex igs_flex1">
+    <image class="userImg" src="{{usrerInfo.userImg}}"></image>
+    <view>
+      <view class="name ">{{usrerInfo.name}}</view>
+      <view class="expirationTime ">{{usrerInfo.expirationTime}}<text>  VIP到期</text></view>
+    </view>
+     <view class="giftBox">
+      <image class="gift" src="../../images/myImg/giftImg.png"></image>
+      <text class="giftBoxText">签到有礼</text>
+     </view>
+  </view>
+    <view class="myBox_center igs-flex  igs-flex4">
+     <block wx:for="{{setMealList}}" wx:key="">
+      <view class="myBox_center_li igs-flex igs_flex1 ">
+        <image class="myBox_center_img" src="{{item.setMealImg}}"></image>
+        <view>
+          <view class="fz32 fw5">{{item.setMealType}}套餐</view>
+          <view class="fz28 ftColorff">{{item.setMealAmount}}/年</view>
+        </view>
+      </view>
+      </block>
+  </view>
+ <view class="myBox_bottom_big">
+    <view class="myBox_bottom igs-flex">
+    <block wx:for="{{menuList}}" wx:key="">
+      <view class="myBox_bottom_li igs_flex1">
+        <view class="myBox_bottom_cont fw5">
+          <image class="menu_img" src="{{item. menuImg}}"></image>
+          <view>{{item. menuName}}</view>
+        </view>
+      </view>
+      </block>
+    </view>
+  </view>
+</view>

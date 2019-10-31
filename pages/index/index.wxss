@@ -1,0 +1,72 @@
+/* pages/index/index.wxss */
+/* 轮播图 */
+.swiper-block{
+  height: 480rpx;
+  width: 100%;
+}
+.swiper-item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  overflow:unset;
+}
+.slide-image{
+  height:320rpx;
+  width: 520rpx;
+  border-radius: 9rpx;
+  box-shadow: 3rpx 4rpx 3rpx 10rpx rgba(186, 244, 239, 0.1);
+  margin: 0rpx 60rpx;
+  z-index: 1;
+}
+.active{
+  transform: scale(1.14);
+  transition:all .2s ease-in 0s;
+  z-index: 20;
+  margin: 0rpx 60rpx;
+}
+/* 套餐 */
+.page-section{
+  width: 100%;
+}
+.ulList{
+  padding: 20rpx;
+}
+.liClass{
+  width: 202rpx;
+  height: 80rpx;
+  background: red;
+  border-radius: 12rpx;
+  box-sizing:border-box;
+  padding:10rpx;
+}
+.fontStrong{
+  font-weight: 600;
+}
+/* tab切换 */
+.swiper-tab {
+    width: 100%;
+    border-bottom: 2rpx solid #ccc;
+    text-align: center;
+    height: 88rpx;
+    line-height: 88rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+ 
+.swiper-tab-item {
+    width: 30%;
+    color: #434343;
+    font-size: 28rpx;
+}
+ 
+.active {
+    color: #f65959;
+    border-bottom: purple solid #f65959;
+}
+ 
+swiper {
+    text-align: center;
+    background-color: #fff
+}

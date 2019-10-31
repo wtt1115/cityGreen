@@ -1,0 +1,67 @@
+/* pages/register/register.wxss */
+.cont{
+  background-color: #fff;
+  padding: 40rpx;
+}
+
+.btnView {
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #cdcbcb;
+  color: white;
+  text-align: center; 
+  margin-top: 100rpx;
+  border-radius: 50rpx;
+}
+.inputBox{
+  height:100rpx;
+  line-height: 100rpx;
+  border-bottom:1px solid #ddd;
+  position:relative;
+  font-size:24rpx;
+  padding-left:70rpx;
+}
+.getCode{
+  position:absolute;
+  top:50%;
+  z-index:10;
+  transform: translate(0,-50%);
+  right:0;
+  padding:0 20rpx;
+  background: #ff6800;
+  width:160rpx;
+  height:60rpx;
+  border-radius: 30rpx;
+  line-height: 60rpx;
+  color:#fff;
+  font-size:24rpx;
+}
+input{
+  width:66%;
+  padding:0 20rpx;
+  height:100rpx;
+  line-height: 100rpx;
+}
+.textCode{
+  color:#808080;
+  position:absolute;
+  top:50%;
+  transform: translate(0,-50%);
+  right:0;
+  padding:0 20rpx;
+  height:60rpx;
+  line-height: 60rpx;
+  font-size:24rpx;
+}
+.icon{
+  width:60rpx;
+  height:60rpx;
+  position:absolute;
+  top:50%;
+  left:0;
+  transform: translate(0,-50%);
+}
+.bgcolor{
+  background:#cdcbcb!important;
+}

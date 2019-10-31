@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/my/my",
+    "pages/default/default",
+    "pages/join/join",
+    "pages/register/register",
+    "pages/index/index",
+    "pages/garden/garden",
+    "pages/interaction/interaction"
+  ],
+  "tabBar": {
+    "color": "#000",
+    "selectedColor":"#01bd9e",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/myImg/index_icon.png",
+        "selectedIconPath": "images/myImg/index_select_icon.png"
+      },
+      {
+        "pagePath": "pages/interaction/interaction",
+        "text": "互动",
+        "iconPath": "images/myImg/interact_icon.png.png",
+        "selectedIconPath": "images/myImg/interact_select_icon.png"
+      },
+      {
+        "pagePath": "pages/garden/garden",
+        "text": "菜园",
+        "iconPath": "images/myImg/garden_icon.png",
+        "selectedIconPath": "images/myImg/garden_select_icon.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/myImg/my_icon.png",
+        "selectedIconPath": "images/myImg/my_select_icon.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "城市种菜",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

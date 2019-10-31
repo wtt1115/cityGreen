@@ -1,0 +1,40 @@
+<!--pages/join/join.wxml-->
+<view class="home flexBox">
+  <view class="container">
+    <view class="page_hd">
+      <image class="page_hd_img" mode="widthFix" style="width:100%;height:auto" src="https://img.gdoil.cn/upload/hd/dieselOilShop/kache_bg.png"></image>
+      <view class="yaoqing" wx:if="{{!type}}">
+        <!-- <image class="yaoqing_img" src="../../images/truck_home/yaoqingjiaru_bg.png"></image> -->
+        <view >用户 {{phonenumber}} 邀请您加入卡车之家</view>
+      </view>
+    </view>
+    <view class="[page_bd,{{type ? 'mt':''}}] " >
+      <!-- <image class="page_hd_img" src="../../images/truck_home/erweima_bg.png"></image> -->
+      <view class="cont-title cont_common">卡车之家</view>
+       <view class="cont_welcome cont_common">加入卡车之家会员,惊喜不断</view>
+      <view class="cont_btn cont_common">
+        <view class="cont_btn_l cont_btn_s">
+          <image class="btn_icon" src="https://img.gdoil.cn/upload/hd/dieselOilShop/xiuxiqu_iocn.png"></image>
+           <view class="cont_btn_title">休息区</view> 
+           <view class="cont_btn_title2">卡车之家专属休息区</view> 
+        </view>
+        <view class="cont_btn_c cont_btn_s">
+          <image class="btn_icon" src="https://img.gdoil.cn/upload/hd/dieselOilShop/zhuanshuquanyi_iocn.png"></image>
+           <view class="cont_btn_title">专属权益</view> 
+           <view class="cont_btn_title2">卡车之家定制优惠</view> 
+        </view>
+        <view class="cont_btn_r cont_btn_s">
+          <image class="btn_icon" src="https://img.gdoil.cn/upload/hd/dieselOilShop/jindoushangcheng_iocn.png"></image>
+          <view class="cont_btn_title">柴油豆商城</view> 
+          <view class="cont_btn_title2">柴油豆兑换好礼</view> 
+        </view>
+     </view>
+    </view>
+    <view class="input_number" wx:if="{{type}}">
+      <input class="inputs" type="number" value="{{recommendCode}}" maxlength="11" bindinput='inputCode' placeholder='请输入推荐码（选填）' placeholder-style="text-align:center;color:#999999;"></input>
+    </view>
+  </view>
+  <view class="page__bd_spacing">
+    <button class="add_btn" bindtap="jion" >马上加入</button>
+  </view>
+</view>

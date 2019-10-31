@@ -1,0 +1,20 @@
+<!--pages/register/register.wxml-->
+<view class="cont">
+  <!-- 获取手机号按钮 -->
+  <button wx:if="{{showBtn}}" class='btnView' open-type='getPhoneNumber' bindgetphonenumber='getPhoneNumber'>登录注册</button>
+  <!-- 输入框 -->
+  <view wx:if="{{!showBtn}}">
+    <view class="inputBox">
+      <image class="icon" src="https://img.gdoil.cn/upload/hd/editphone/login_phone2.jpg"></image>
+      <input value="{{phone}}" type="number" maxlength="11" bindinput='inputCode'  bindinput="getPhone"  placeholder='请输入您的手机号'></input>
+    </view>
+    <view class="inputBox">
+      <image class="icon" src="https://img.gdoil.cn/resources/img/resetpassword/icon_VerificationCode.png"></image>
+      <input bindinput="getCodeNum" placeholder='请输入您的手机验证码'></input>
+      <button disabled="{{disabled}}" type="number"  bindtap='getcode' class="getCode {{disabled ?'bgcolor':''}}">{{time}}</button>
+    </view>
+  <button  wx:if='{{confirmDisabled}}' class='btnView'>确认登录</button>
+  <button bindtap='confirm' wx:if='{{!confirmDisabled}}' style="background:#ff6800;" class='btnView'>确认登录</button>
+   <view style="font-size:24rpx;color:#808080;padding:20rpx;">温馨提示：未注册加油广东的用户，本次验证码通过后将会自动为您注册与绑定微信！</view>
+  </view>
+</view>

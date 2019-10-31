@@ -11,13 +11,13 @@
       <text class="giftBoxText">签到有礼</text>
      </view>
   </view>
-    <view class="myBox_center igs-flex  igs-flex4">
+    <view class="myBox_center igs-flex igs-flex6">
      <block wx:for="{{setMealList}}" wx:key="">
-      <view class="myBox_center_li igs-flex igs_flex1 ">
+      <view class="myBox_center_li igs-flex igs_flex1">
         <image class="myBox_center_img" src="{{item.setMealImg}}"></image>
         <view>
           <view class="fz32 fw5">{{item.setMealType}}套餐</view>
-          <view class="fz28 ftColorff">{{item.setMealAmount}}/年</view>
+           <view class="fz28 ftColorff">{{item.setMealAmount}}/年</view>
         </view>
       </view>
       </block>

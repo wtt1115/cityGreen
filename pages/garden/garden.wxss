@@ -1,1 +1,55 @@
 /* pages/garden/garden.wxss */
+page,
+.page,
+.page__bd{
+    height: 100%;
+}
+.page__bd{
+    padding-bottom: 0;
+}
+.weui-tab__content{
+    padding-top: 60px;
+    text-align: center;
+}
+.garden_cont{
+  padding:0 100rpx;
+  
+}
+.interaction_cont_li{
+  position:relative;
+  margin-bottom:100rpx;
+  text-align: left!important;
+  margin-top:20rpx;
+}
+.cont_img{
+  width:33%;
+  height:186rpx;
+  margin-top:6rpx;
+}
+.userImg{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 8rpx;
+  position:absolute;
+  top:-10rpx;
+  left:-85rpx;
+}
+.operation{
+  margin-top:40rpx;
+  position:relative;
+}
+.time{
+  margin-right:100rpx;
+}
+.operating_btn{
+  width:58rpx;
+  height:38rpx;
+  position:absolute;
+  right:10rpx;
+  top:50%;
+  margin-top:-20rpx;
+}
+.weui-navbar{
+  position:fixed!important;
+  background: #fff;
+}

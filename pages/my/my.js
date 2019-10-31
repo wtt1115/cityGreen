@@ -34,31 +34,31 @@ Page({
     ],
     menuList:[
       {
-        menuImg: '../../images/myImg/myCaiping.jpg',
+        menuImg: '../../images/myImg/myCaiping.png',
         menuName: '我的菜品',
       }, {
-        menuImg: '../../images/myImg/my_integral.jpg',
+        menuImg: '../../images/myImg/my_integral.png',
         menuName: '我的积分',
       }, {
-        menuImg: '../../images/myImg/myMessage.jpg',
+        menuImg: '../../images/myImg/myMessage.png',
         menuName: '我的信息',
       }, {
-        menuImg: '../../images/myImg/invite.jpg',
+        menuImg: '../../images/myImg/invite.png',
         menuName: '邀请有礼',
       }, {
-        menuImg: '../../images/myImg/remindService.jpg',
+        menuImg: '../../images/myImg/remindService.png',
         menuName: '提醒服务',
       }, {
-        menuImg: '../../images/myImg/reservationService .jpg',
+        menuImg: '../../images/myImg/reservationService .png',
         menuName: '预约服务',
       }, {
-        menuImg: '../../images/myImg/replaceService.jpg',
+        menuImg: '../../images/myImg/replaceService.png',
         menuName: '更换服务',
       }, {
-        menuImg: '../../images/myImg/contactUs.jpg',
+        menuImg: '../../images/myImg/contactUs.png',
         menuName: '联系我们',
       }, {
-        menuImg: '../../images/myImg/feedbackCenter.jpg',
+        menuImg: '../../images/myImg/feedbackCenter.png',
         menuName: '反馈中心',
       }
     ]

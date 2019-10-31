@@ -1,16 +1,18 @@
 {
   "pages": [
+   
+    "pages/index/index",
     "pages/my/my",
     "pages/default/default",
     "pages/join/join",
     "pages/register/register",
-    "pages/index/index",
     "pages/garden/garden",
-    "pages/interaction/interaction"
+    "pages/interaction/interaction",
+    "pages/details/details"
   ],
   "tabBar": {
     "color": "#000",
-    "selectedColor":"#01bd9e",
+    "selectedColor": "#01bd9e",
     "borderStyle": "black",
     "list": [
       {

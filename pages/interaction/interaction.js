@@ -5,7 +5,86 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    commandArraylist: [
+      {
+        userUrl: '../../images/myImg/userImg.jpg',
+        username: 'A善手教育咨询胡老师',
+        time: '7分钟前',
+        praiseFlag: false,
+        lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
+        imgUrlLst: ['../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png'],
+        commandUserList: [
+          {
+            name: 'zero',
+            text: '厉害'
+          },
+          {
+            name: '华仔',
+            text: '不错'
+          },
+          {
+            name: '方知',
+            text: 'hello'
+          },
+          {
+            name: '吴氏生飞 地产老猫',
+            text: '好产品'
+          },
+        ]
+      },
+      {
+        userUrl: '../../images/myImg/userImg.jpg',
+        username: 'A善手教育咨询胡老师',
+        time: '7分钟前',
+        praiseFlag: false,
+        lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
+        imgUrlLst: ['../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png'],
+        commandUserList: [
+          {
+            name: 'zero',
+            text: '厉害'
+          },
+          {
+            name: '华仔',
+            text: '不错'
+          },
+          {
+            name: '方知',
+            text: 'hello'
+          },
+          {
+            name: '吴氏生飞 地产老猫',
+            text: '好产品'
+          },
+        ]
+      },
+       {
+        userUrl: '../../images/myImg/userImg.jpg',
+        username: 'A善手教育咨询胡老师',
+        time: '7分钟前',
+        praiseFlag: false,
+        lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
+        imgUrlLst: ['../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png'],
+        commandUserList: [
+          {
+            name: 'zero',
+            text: '厉害'
+          },
+          {
+            name: '华仔',
+            text: '不错'
+          },
+          {
+            name: '方知',
+            text: 'hello'
+          },
+          {
+            name: '吴氏生飞 地产老猫',
+            text: '好产品'
+          },
+        ]
+      }
+    ]
   },
 
   /**

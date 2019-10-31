@@ -6,11 +6,12 @@
     "pages/register/register",
     "pages/index/index",
     "pages/garden/garden",
-    "pages/interaction/interaction"
+    "pages/interaction/interaction",
+    "pages/orderDetails/orderDetails"
   ],
   "tabBar": {
     "color": "#000",
-    "selectedColor":"#01bd9e",
+    "selectedColor": "#01bd9e",
     "borderStyle": "black",
     "list": [
       {

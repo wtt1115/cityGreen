@@ -32,18 +32,21 @@ Page({
     ],
     dishesSelectList:[
       {
+        id: 1,
         images: '../../images/detailsImg/chooseOne.png',
         title: '自己阳台种的青菜1',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
         chooseStatus: 'false'
       },
       {
+        id: 2,
         images: '../../images/detailsImg/chooseOne.png',
         title: '自己阳台种的青菜2',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
         chooseStatus: 'true'
       },
       {
+        id: 3,
         images: '../../images/detailsImg/chooseOne.png',
         title: '自己阳台种的青菜3',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
@@ -82,6 +85,19 @@ Page({
         currentTab: e.target.dataset.current,
       })
     }
+  },
+  activeNav: function (e) {
+    var dishesSelectList = this.data.dishesSelectList;
+    for (var i = 0; i < dishesSelectList.length; i++) {
+      if (dishesSelectList[i].id == e.currentTarget.id) {
+        dishesSelectList[i].chooseStatus = 'true';
+      } else if (dishesSelectList[i].id != e.currentTarget.id) {
+        dishesSelectList[i].chooseStatus = 'false';
+      }
+    }
+    this.setData({
+      dishesSelectList: dishesSelectList
+    })
   },
   /**
    * 生命周期函数--监听页面隐藏

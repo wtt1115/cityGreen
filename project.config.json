@@ -70,13 +70,13 @@
 					"query": "",
 					"scene": null
 				},
-        {
-          "id": 4,
-          "name": "互动",
-          "pathName": "pages/interaction/interaction",
-          "query": "",
-          "scene": null
-        }
+				{
+					"id": 4,
+					"name": "互动",
+					"pathName": "pages/interaction/interaction",
+					"query": "",
+					"scene": null
+				}
 			]
 		}
 	}

@@ -3,7 +3,7 @@
   <!-- 详情信息上部分 -->
   <view class="details_topBox">
     <view>
-      <swiper class="swiper-block"  autoplay="{{autoplay}}" indicatorDots="{{indicatorDots}}"  indicator-color="{{defuColor}}"          indicator-active-color="{{actiColor}}" bindchange="swiperChange" circular="{{circular}}">
+      <swiper class="swiper-block"  autoplay="{{autoplay}}" indicatorDots="{{indicatorDots}}"  indicator-color="{{defuColor}}"          indicator-active-color="{{actiColor}}" circular="{{circular}}">
       <block wx:for="{{detailsInfo.imgUrls}}" wx:key="{{index}}">
         <swiper-item class="swiper-item">
           <image mode="aspectFill" src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}"/>
@@ -54,7 +54,11 @@
             <view class="rightBox">
               <view class="li_title">{{item.title}}</view>
               <view class="li_describe">{{item.describe}}</view>
-              <button class="chooseBut {{item.chooseStatus == 'true' ? 'activeChoose' : ''}}">{{item.chooseStatus == 'true' ? '请选择': '已选择'}} </button>
+              <view bindtap="activeNav" id="{{item.id}}">
+                <button class="chooseBut {{item.chooseStatus == 'true' ? 'activeChoose' : ''}}">
+                  {{item.chooseStatus == 'true' ? '已选择': '请选择'}}
+                </button>
+              </view>
             </view>
           </view>
           </block>

@@ -3,6 +3,7 @@ page,
 .page,
 .page__bd{
     height: 100%;
+    font-size:14px;
 }
 .page__bd{
     padding-bottom: 0;
@@ -12,7 +13,7 @@ page,
     text-align: center;
 }
 .garden_cont{
-  padding:0 100rpx;
+  padding:0 40rpx 0 100rpx;
   
 }
 .interaction_cont_li{

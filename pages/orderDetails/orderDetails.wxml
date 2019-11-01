@@ -1,0 +1,80 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class="w_content">
+  <!-- 详情信息上部分 -->
+  <view class="details_topBox">
+    <view>
+      <swiper class="swiper-block"  autoplay="{{autoplay}}" indicatorDots="{{indicatorDots}}"  indicator-color="{{defuColor}}"          indicator-active-color="{{actiColor}}" circular="{{circular}}">
+      <block wx:for="{{detailsInfo.imgUrls}}" wx:key="{{index}}">
+        <swiper-item class="swiper-item">
+          <image mode="aspectFill" src="{{item}}" class="slide-image {{swiperIndex == index ? 'active' : ''}}"/>
+          <view class="tips">
+            <view class="tipsNum">{{index + 1}} / {{ detailsInfo.imgUrls.length}}</view>
+          </view>
+        </swiper-item>
+      </block>
+      </swiper>
+    </view>
+    <view class="details_box">
+      <view class="details_price">￥{{detailsInfo.price}}</view>
+      <view class="details_describe">{{detailsInfo.describe}}</view>
+    </view>
+  </view>
+   <!-- 详情信息下部分 -->
+   <view class="details_fotBox"> 
+    <!-- 详情tab -->
+    <view>
+      <view class="swiper-tab">
+        <view class="swiper-tab-item interval {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab"> 
+          产品详情
+        </view>
+        <view class="swiper-tab-item  interval {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">
+          菜品选择
+        </view>
+        <view class="swiper-tab-item interval {{currentTab==2?'active':''}} borderNo" data-current="2" bindtap="clickTab">
+          服务内容
+        </view>
+      </view>
+    </view>
+    <!-- tab对应的内容 -->
+    <view>
+      <view class = "{{currentTab == 0 ? 'show':'hidden'}}" >
+        <scroll-view class="shopDetails">
+          <block wx:for="{{shopDetailsImgs}}" wx:key="{{index}}">
+            <image class="shopDetailsImgs {{shopDetailsImgs.length == index ? 'imgsDefault' : ''}}" mode="aspectFill" src="{{item}}"/>
+          </block>
+        </scroll-view>
+      </view>
+      <view class = "{{currentTab == 1 ? 'show':'hidden'}}" >
+        <scroll-view class="dishesSelectBox">
+          <block wx:for="{{dishesSelectList}}" wx:key="{{index}}">
+          <view class="liList {{dishesSelectList.length - 1 == index ? 'borderNo' : ''}}">
+            <view class="leftBox">
+              <image class="" mode="aspectFill" src="{{item.images}}"/>
+            </view>
+            <view class="rightBox">
+              <view class="li_title">{{item.title}}</view>
+              <view class="li_describe">{{item.describe}}</view>
+              <view bindtap="activeNav" id="{{item.id}}">
+                <button class="chooseBut {{item.chooseStatus == 'true' ? 'activeChoose' : ''}}">
+                  {{item.chooseStatus == 'true' ? '已选择': '请选择'}}
+                </button>
+              </view>
+            </view>
+          </view>
+          </block>
+        </scroll-view>
+      </view>
+      <view class = "{{currentTab == 2 ? 'show':'hidden'}}">
+        <scroll-view class="serConImgsBox">
+          <block wx:for="{{serConImgs}}" wx:key="{{index}}">
+            <image class="serConImgs {{serConImgs.length == index ? 'imgsDefault' : ''}}" mode="aspectFill" src="{{item}}"/>
+          </block>
+        </scroll-view>
+      </view>
+    </view>
+    <!-- 立即购买按钮 -->
+    <view class="goPay">
+      <button class="goPayButton">立即购买</button>
+    </view>
+   </view>
+</view>

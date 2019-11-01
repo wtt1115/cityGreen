@@ -43,23 +43,23 @@
 			"current": 3,
 			"list": [
 				{
-					"id": -1,
+					"id": 0,
 					"name": "我的",
 					"pathName": "pages/my/my",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "互动",
-					"pathName": "pages/register/register",
+					"id": 1,
+					"name": "首页",
+					"pathName": "pages/index/index",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "互动",
-					"pathName": "pages/interaction/interaction",
+					"id": 2,
+					"name": "订单详情",
+					"pathName": "pages/orderDetails/orderDetails",
 					"query": "",
 					"scene": null
 				},
@@ -67,6 +67,13 @@
 					"id": 3,
 					"name": "菜园",
 					"pathName": "pages/garden/garden",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "互动",
+					"pathName": "pages/interaction/interaction",
 					"query": "",
 					"scene": null
 				}

@@ -9,7 +9,8 @@
     "pages/interaction/interaction",
     "pages/orderDetails/orderDetails",
     "pages/details/details",
-    "pages/pub_Interact/pub_Interact"
+    "pages/pubInteract/pubInteract",
+    "pages/vegeDetails/vegeDetails"
   ],
   "tabBar": {
     "color": "#000",

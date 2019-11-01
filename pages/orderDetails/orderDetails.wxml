@@ -38,7 +38,7 @@
     <!-- tab对应的内容 -->
     <view>
       <view class = "{{currentTab == 0 ? 'show':'hidden'}}" >
-        <scroll-view class="shopDetails">
+        <scroll-view class="shopDetails footBom">
           <block wx:for="{{shopDetailsImgs}}" wx:key="{{index}}">
             <image class="shopDetailsImgs {{shopDetailsImgs.length == index ? 'imgsDefault' : ''}}" mode="aspectFill" src="{{item}}"/>
           </block>
@@ -65,7 +65,7 @@
         </scroll-view>
       </view>
       <view class = "{{currentTab == 2 ? 'show':'hidden'}}">
-        <scroll-view class="serConImgsBox">
+        <scroll-view class="serConImgsBox footBom">
           <block wx:for="{{serConImgs}}" wx:key="{{index}}">
             <image class="serConImgs {{serConImgs.length == index ? 'imgsDefault' : ''}}" mode="aspectFill" src="{{item}}"/>
           </block>

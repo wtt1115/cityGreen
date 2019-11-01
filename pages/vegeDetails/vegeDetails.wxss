@@ -1,0 +1,21 @@
+/* pages/vegeDetails/vegeDetails.wxss */
+.w_infomation{
+  width: 100%;
+  height: 100%;
+  padding: 28rpx;
+}
+.w_infomation .contentClass{
+  font-size: 32rpx;
+  color:#121922;
+  line-height: 120rpx;
+  border-bottom:  1rpx solid #f1f1f1;
+}
+.imgClass{
+  margin-top: 20rpx;
+  padding: 0 88rpx 0 28rpx;
+}
+.imgClass image{
+  width: 158rpx;
+  height: 158rpx;
+  margin-right: 8rpx;
+}

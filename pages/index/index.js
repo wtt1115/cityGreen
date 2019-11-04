@@ -1,4 +1,5 @@
 var app = getApp();
+var that
 Page({
   onShareAppMessage() {
     return {
@@ -53,7 +54,7 @@ Page({
     //社区列表
     DataSource: [1, 1, 1, 1, 1],
     icon: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3175633703,3855171020&fm=27&gp=0.jpg',
-    content: '我大学毕业到一家集团公司的办公室当文员。办公室主任有一特长，即文章写得好，很有思想，公司董事长很器重他，董事长的讲话稿和企业的年终总结等一系列重大文章都是出自他的手笔。',
+    content: '一分钟了解阳台种菜一分钟了解阳台种菜，一分钟了解阳台种菜',
     resource: ['http://img2.imgtn.bdimg.com/it/u=2118739199,3378602431&fm=27&gp=0.jpg',
       'http://img0.imgtn.bdimg.com/it/u=2277942808,1417432970&fm=27&gp=0.jpg',
       'http://img5.imgtn.bdimg.com/it/u=1504812505,3480403568&fm=27&gp=0.jpg',
@@ -68,14 +69,6 @@ Page({
     {
       'firstname': '李四',
       'content': '纳尼！！'
-    },
-    {
-      'firstname': '王五',
-      'content': '鬼扯咧'
-    },
-    {
-      'firstname': '王宝',
-      'content': '昨晚11点左右，一则郑爽胡彦斌疑似复合的消息刷爆各大论坛，微博在深夜11点热度高达200万直接爆掉，中国意难忘又开始了！！！'
     }
     ],
     photoWidth: wx.getSystemInfoSync().windowWidth / 5,
@@ -132,7 +125,7 @@ Page({
   },
 
   onLoad: function () {
-    var that = this;
+    that = this;
     //  高度自适应
     wx.getSystemInfo({
       success: function (res) {
@@ -174,6 +167,60 @@ Page({
     } else {
       this.setData({
         scrollLeft: 0
+      })
+    }
+  },
+  // 点击点赞的人
+  TouchZanUser: function (e) {
+    wx.showModal({
+      title: e.currentTarget.dataset.name,
+      showCancel: false
+    })
+  },
+
+  // 删除朋友圈
+  delete: function () {
+    wx.showToast({
+      title: '删除成功',
+    })
+  },
+
+  // 点击了点赞评论
+  TouchDiscuss: function (e) {
+    // this.data.isShow = !this.data.isShow
+    // 动画
+    var animation = wx.createAnimation({
+      duration: 300,
+      timingFunction: 'linear',
+      delay: 0,
+    })
+    if (that.data.isShow == false) {
+      that.setData({
+        popTop: e.target.offsetTop - (e.detail.y - e.target.offsetTop) / 2,
+        popWidth: 0,
+        isShow: true
+      })
+
+      // 0.3秒后滑动
+      setTimeout(function () {
+        animation.width(0).opacity(1).step()
+        that.setData({
+          animation: animation.export(),
+        })
+      }, 100)
+    } else {
+      // 0.3秒后滑动
+      setTimeout(function () {
+        animation.width(120).opacity(1).step()
+        that.setData({
+          animation: animation.export(),
+        })
+      }, 100)
+
+      that.setData({
+        popTop: e.target.offsetTop - (e.detail.y - e.target.offsetTop) / 2,
+        popWidth: 0,
+        isShow: false
       })
     }
   }

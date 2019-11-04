@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/details/details",
     "pages/index/index",
     "pages/my/my",
     "pages/default/default",
@@ -8,7 +9,6 @@
     "pages/garden/garden",
     "pages/interaction/interaction",
     "pages/orderDetails/orderDetails",
-    "pages/details/details",
     "pages/pub_Interact/pub_Interact"
   ],
   "tabBar": {

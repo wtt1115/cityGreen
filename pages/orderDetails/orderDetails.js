@@ -90,9 +90,11 @@ Page({
     var dishesSelectList = this.data.dishesSelectList;
     for (var i = 0; i < dishesSelectList.length; i++) {
       if (dishesSelectList[i].id == e.currentTarget.id) {
-        dishesSelectList[i].chooseStatus = 'true';
-      } else if (dishesSelectList[i].id != e.currentTarget.id) {
-        dishesSelectList[i].chooseStatus = 'false';
+        if (dishesSelectList[i].chooseStatus === 'true') {
+          dishesSelectList[i].chooseStatus ='false'
+        } else if (dishesSelectList[i].chooseStatus === 'false') {
+          dishesSelectList[i].chooseStatus = 'true'
+        }
       }
     }
     this.setData({

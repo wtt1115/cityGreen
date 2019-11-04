@@ -1,0 +1,33 @@
+<!--pages/pub_Interact/pub_Interact.wxml-->
+<view>
+<view>
+  <form bindsubmit="bindFormSubmit">
+    <!-- 这一刻想法 -->
+    <view class="thinkWay">
+      <textarea placeholder="这一刻的想法..." placeholder-class="place" name="textarea" maxlength="-1" value="{{textValue}}"/>
+    </view>
+    <!-- 图片数组 -->
+    <view class="imgsArray igs-flex">
+      <view wx:for="{{imgChangeList}}" wx:key="{{index}}" >
+      <view class="imgChangeList">
+        <image class="imgChangeList.length - 1 == index ? 'interval' : ''" src="{{item.images}}" bindtap="showHandle" id="{{index}}"></image>
+        <view wx:if="{{item.deleteStatus}}" class="fixBack" bindtap="deleteChange" id="{{index}}">
+          <image src="{{deleteSvg}}"></image>
+        </view>
+      </view>
+      </view>
+      <image src="{{addImg}}" bindtap="addImgChange"></image>
+    </view>
+    <!-- 所在位置 -->
+    <view class="positionBox igs-flex" bindtap="positionChange">
+      <image src="{{positionSvg}}" class="posSvg"></image>
+      <view class="posTitle">{{ choosePosition }}</view>
+      <image src="{{arrowRightSvg}}" class="arRigSvg"></image>
+    </view>
+    <!-- 立即发布 -->
+    <view class="goSubmit">
+      <button form-type="submit">立即发布</button>
+    </view>
+  </form>
+</view>
+</view>

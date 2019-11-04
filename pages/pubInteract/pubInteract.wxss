@@ -1,0 +1,90 @@
+/* pages/pub_Interact/pub_Interact.wxss */
+.place{
+  font-size: 32rpx;
+  color:#aeaeae;
+}
+.thinkWay{
+  width: 100%;
+  height: 218rpx;
+  padding: 20rpx 0 0rpx 40rpx;
+  font-size: 32rpx;
+  color:#313133;
+  overflow-y: scroll;
+}
+/* 隐藏滚动条 */
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.imgsArray{
+  margin: 0 40rpx;
+  padding-bottom: 36rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.imgsArray image{
+  display: block;
+  width: 158rpx;
+  height: 158rpx;
+}
+.interval{
+  margin-right: 0
+}
+.imgChangeList{
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.fixBack{
+  width: 158rpx;
+  height: 42rpx;
+  background: #000000;
+  opacity: 0.58;
+  padding: 10rpx 70rpx;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.fixBack image{
+  width: 20rpx;
+  height: 25rpx;
+}
+.positionBox{
+  height: 100rpx;
+  padding: 20rpx 0 0rpx 40rpx;
+  position: relative;
+}
+.positionBox .posSvg{
+  display: block;
+  width: 36rpx;
+  height: 43rpx;
+  margin-right: 20rpx;
+}
+.positionBox .posTitle{
+  font-size: 32rpx;
+  color:#313133;
+}
+.positionBox .arRigSvg{
+  display: block;
+  width: 12rpx;
+  height: 22rpx;
+  position: absolute;
+  right:75rpx;
+  bottom:50rpx;
+}
+/* 立即发布 */
+.goSubmit{
+  width: 100%;
+  position: fixed;
+  bottom:0;
+  left: 0;
+}
+.goSubmit button{
+  width: 100%;
+  height: 98rpx;
+  background:#fe7b07;
+  font-size: 36rpx;
+  color:#fff;
+  line-height: 100rpx;
+  text-align: center;
+}

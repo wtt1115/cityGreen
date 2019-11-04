@@ -103,6 +103,9 @@
   height: 494rpx;
   margin-top: 20rpx;
 }
+.footBom{
+  margin-bottom: 10rpx;
+}
 .serConImgsBox{
   margin-top: 20rpx;
 }

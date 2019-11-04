@@ -1,0 +1,14 @@
+<!--pages/vegeDetails/vegeDetails.wxml-->
+<view class="igs-flex">
+  <view class="w_infomation">
+    <view class="contentClass">发布标题：{{detailsInfo.title}}</view>
+    <view class="contentClass">联系人：{{detailsInfo.contacts}}</view>
+    <view class="contentClass">联系地址：{{detailsInfo.address}}</view>
+    <view class="contentClass">简介：{{detailsInfo.describe}}</view>
+  </view>
+  <view class="imgClass igs-flex">
+    <view class="" wx:for="{{detailsInfo.imgsArray}}" wx:key="{{index}}">
+      <image src="{{item}}"></image>
+    </view>
+  </view>
+</view>

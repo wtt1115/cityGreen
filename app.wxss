@@ -194,3 +194,13 @@ button {
 view{
   box-sizing: border-box;
 }
+/* 清除浮动 */
+.clearfix:after{
+  content:"";
+  display:block;
+  height:0;
+  clear:both;
+  overflow:hidden;
+  visibility:hidden;
+  zoom:1;
+}

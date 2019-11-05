@@ -1,25 +1,11 @@
-// pages/vegeDetails/vegeDetails.js
+// pages/signIn/signIn.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    detailsInfo: {
-      title: '阳台上种的蔬菜',
-      contacts: '张先生',
-      address: '长沙市中南大学',
-      describe: '自家种的有机蔬菜，纯绿色产品',
-      imgsArray: [
-        '../../images/indexImg/details.png',
-        '../../images/indexImg/details.png',
-        '../../images/indexImg/details.png',
-        '../../images/indexImg/details.png',
-        '../../images/indexImg/details.png',
-        '../../images/indexImg/details.png'
-      ],
-      videoSrc: ''
-    }
+    integralNum: 75
   },
 
   /**
@@ -42,6 +28,7 @@ Page({
   onShow: function () {
 
   },
+
   /**
    * 生命周期函数--监听页面隐藏
    */

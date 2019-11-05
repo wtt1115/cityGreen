@@ -10,7 +10,16 @@
     "pages/orderDetails/orderDetails",
     "pages/details/details",
     "pages/pubInteract/pubInteract",
-    "pages/vegeDetails/vegeDetails"
+    "pages/vegeDetails/vegeDetails",
+    "pages/vegeIssue/vegeIssue",
+    "pages/setMealDetails/setMealDetails",
+    "pages/serverChange/serverChange",
+    "pages/myDishes/myDishes",
+    "pages/feedbackCenter/feedbackCenter",
+    "pages/contactUs/contactUs",
+    "pages/invitation/invitation",
+    "pages/integralDetails/integralDetails",
+    "pages/signIn/signIn"
   ],
   "tabBar": {
     "color": "#000",

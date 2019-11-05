@@ -1,4 +1,4 @@
-<!--pages/orderDetails/orderDetails.wxml 订单详情页面-->
+<!--pages/orderDetails/orderDetails.wxml 套餐详情页面-->
 <view class="w_content">
   <!-- 详情信息上部分 -->
   <view class="details_topBox">

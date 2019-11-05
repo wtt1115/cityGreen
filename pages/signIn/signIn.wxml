@@ -1,0 +1,18 @@
+<!--pages/signIn/signIn.wxml-->
+<view class="root">
+  <!-- 背景图片 -->
+  <view  class="backgroundImage">
+    <image src="../../images/signInImg/backImg.png"></image>
+  </view>
+  <!-- 我的积分 -->
+  <view class="myIntegral">
+    我的积分: {{integralNum}}分
+    <image class="arrow" src="../../images/signInImg/arrow.png"></image>
+  </view>
+  <!-- 点我签到 -->
+  <view class="butSign"></view>
+  <view class="cont">点我签到</view>
+    <!-- 日历表 -->
+  <view class="calendar">
+  </view>
+</view>

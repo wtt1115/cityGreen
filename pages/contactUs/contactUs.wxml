@@ -1,0 +1,8 @@
+<!--pages/contactUs/contactUs.wxml 联系我们页面-->
+<view class="contactBox">
+  <view wx:for="{{contanctList}}" wx:key="{{index}}" class="liClass">
+    <image class="leftImg" src="{{item.img}}"></image>
+    <view class="titleFont">{{item.title}}</view>
+    <image class="rightImg" src="{{arrowRightSvg}}"></image>
+  </view>
+</view>

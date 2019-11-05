@@ -1,0 +1,65 @@
+/* pages/signIn/signIn.wxss */
+.root{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+.backgroundImage image{
+  height : 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+}
+.myIntegral{
+  position: absolute;
+  left: 30rpx;
+  top: 450rpx;
+  z-index: 110;
+  font-size: 34rpx;
+  color:#eaff00;
+  font-weight: bold;
+}
+.arrow{
+  width: 15rpx;
+  height: 26rpx;
+  margin-left: 20rpx;
+}
+.calendar{
+  position: absolute;
+  left: 30rpx;
+  top: 550rpx;
+  z-index: 110;
+  width: 690rpx;
+  height: 603rpx;
+  border:1rpx solid #f1f1f1;
+}
+.butSign{
+  position: absolute;
+  right: 30rpx;
+  top: 450rpx;
+  z-index: 110;
+  width: 198rpx;
+  height: 198rpx;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.1;
+} 
+.cont{
+  position: absolute;
+  right: 48rpx;
+  top: 470rpx;
+  z-index: 120;
+  width: 158rpx;
+  height: 158rpx;
+  border-radius: 50%;
+  font-weight: bold;
+  background: #e69d00;
+  font-size: 32rpx;
+  color:#fff;
+  text-align: center;
+  padding:20rpx 41rpx;
+  letter-spacing:6rpx;
+  text-shadow:2px 2px #e69d00;
+}

@@ -289,7 +289,7 @@ page {
 .TDD-view button {
   font-size: 13px;
   margin-left: 20rpx;
-  color: black;
+  color: #c78d1c;
   background: white;
 }
 .TDD-view button::after {

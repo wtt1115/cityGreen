@@ -1,0 +1,57 @@
+<!-- 我的信息 -->
+<view class="weui-cells weui-cells_after-title">
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">头像</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <view class='left-view' bindtap="chooseImage">
+          <image class='headPortrait' src='../../images/myImg/userImg.jpg'></image>
+        </view>
+      </view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">姓名</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <input value="豆沙包" class="weui-input" auto-focus placeholder="请输入"/>
+      </view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">性别</view>
+      <view class="weui-cell__ft">
+        <view class="weui-cell__ft">
+          <view class="gender active">
+            <!-- <image src="../../images/myImg/package1.png"></image> -->
+            <text>男</text>
+          </view>
+          <view class="gender">
+            <!-- <image src="../../images/myImg/package1.png"></image> -->
+            <text>女</text>
+          </view>
+        </view>
+      </view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">身份证</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <input value="45612378912345678" class="weui-input" auto-focus placeholder="请输入"/>
+      </view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">手机</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <input value="155*****123" class="weui-input" auto-focus placeholder="请输入"/>
+      </view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">邮箱</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <input class="weui-input" auto-focus placeholder="接受通知"/>
+      </view>
+  </navigator>
+  <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__bd">地址</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access">
+        <input class="weui-input" auto-focus placeholder="常驻地址"/>
+      </view>
+  </navigator>
+</view>
+<view class="btn">保存</view>

@@ -1,15 +1,17 @@
 {
   "pages": [
-    "pages/details/details",
     "pages/index/index",
+    "pages/myInfo/myInfo",
+    "pages/tipService/tipService",
+    "pages/reservationService/reservationService",
+    "pages/orderDetails/orderDetails",
+    "pages/details/details",
     "pages/my/my",
     "pages/default/default",
     "pages/join/join",
     "pages/register/register",
     "pages/garden/garden",
     "pages/interaction/interaction",
-    "pages/orderDetails/orderDetails",
-    "pages/details/details",
     "pages/pubInteract/pubInteract",
     "pages/vegeDetails/vegeDetails"
   ],

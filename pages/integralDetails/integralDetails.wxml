@@ -1,0 +1,29 @@
+<!--pages/integralDetails/integralDetails.wxml 积分详情页面-->
+<view class="integralBack">
+  <!-- 可用积分 -->
+  <view class="integralImg" style="background:transparent url('../../images/integralImg.png') no-repeat center">
+    <view class="cont">
+      <view class="smallFont">可用积分</view>
+      <view class="bigFont">{{integralNum}}</view>
+      <view class="smallFont">
+        <text>累计积分</text>
+        <text>{{manyIntegralNum}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- 积分列表 -->
+  <view class="integralArray">
+    <view class="inteTitle">积分列表</view>
+    <view class="inteList">
+      <scroll-view class="inteListUl" scroll-y="true" style="height:{{ windowHeight - 502 }}rpx">
+        <view wx:for="{{integralList}}" wx:key="{{index}}">
+          <view class="inteListLi {{integralList.length - 1 == index ? 'borderNo': ''}}">
+            <view class="li_title">{{item.title}}</view>
+            <view class="li_time">{{item.time}}</view>
+            <view class="li_number">{{item.number}}</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+</view>

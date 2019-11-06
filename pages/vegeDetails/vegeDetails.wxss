@@ -19,3 +19,12 @@
   height: 158rpx;
   margin-right: 8rpx;
 }
+.videoClass{
+  margin-top: 20rpx;
+  padding: 0 0 0 28rpx;
+}
+.videoClass video{
+  width: 571rpx;
+  height: 330rpx;
+  border-radius: 20rpx;
+}

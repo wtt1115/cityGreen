@@ -1,0 +1,76 @@
+/* pages/myDishes/myDishes.wxss */
+.myDishesBox{
+  border-top: 1rpx solid #f1f1f1;
+}
+.dishesSelectBox{
+  
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.liList{
+  display: flex;
+  margin-left: 38rpx;
+  margin-right: 38rpx;
+  padding: 46rpx 0 78rpx 0;
+  border-bottom: 1rpx solid #f1f1f1;
+  position:relative;
+}
+.liList .rightBox{
+  margin-left: 20rpx;
+  width: 50%;
+}
+.liList image{
+  width: 289rpx;
+  height: 163rpx;
+}
+.liList .li_title{
+  font-size: 28rpx;
+  font-weight: bold;
+  color:#313133;
+  line-height: 38rpx;
+}
+.liList .li_describe{
+  font-size: 22rpx;
+  color:#5d6463;
+  line-height: 30rpx;
+}
+.chooseBut{
+  width: 122rpx;
+  height: 48rpx;
+  border-radius: 24rpx;
+  font-size: 22rpx;
+  color:#b0b3b3;
+  border: 1rpx solid #f1f1f1;
+  text-align: center;
+  line-height: 48rpx;
+  position: absolute;
+  right: 10rpx;
+  bottom: 20rpx;
+}
+.activeChoose{
+  background:#00dab7;
+  border: 1rpx solid #00dab7;
+  color:#fff;
+}
+.borderNo{
+  border: 0;
+}
+/* 立即购买 */
+.goSubmit{
+  width: 100%;
+  position:fixed;
+  bottom: 0;
+  left:0;
+}
+.goSubmit button{
+  width: 100%;
+  height: 98rpx;
+  background:#fe7b07;
+  font-size: 36rpx;
+  color:#fff;
+  line-height: 120rpx;
+  text-align: center;
+}

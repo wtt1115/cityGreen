@@ -1,0 +1,32 @@
+/* pages/feedbackCenter/feedbackCenter.wxss */
+.feedbackBox{
+  padding: 0 30rpx;
+}
+.thinkWay{
+  width: 693rpx;
+  height: 441rpx;
+  border: 1rpx solid #f1f1f1;
+}
+.thinkWay textarea{
+  padding: 38rpx;
+  font-size: 32rpx;
+  color:#313133;
+}
+.place{
+  font-size: 32rpx;
+  color:#aeaeae;
+}
+/* 提交信息 */
+.goSubmit{
+  width: 100%;
+  margin-top: 60rpx;
+}
+.goSubmit button{
+  width: 100%;
+  height: 98rpx;
+  background:#fe7b07;
+  font-size: 36rpx;
+  color:#fff;
+  line-height: 100rpx;
+  text-align: center;
+}

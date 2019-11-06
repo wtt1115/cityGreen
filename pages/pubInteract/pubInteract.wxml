@@ -1,4 +1,4 @@
-<!--pages/pub_Interact/pub_Interact.wxml-->
+<!--pages/pub_Interact/pub_Interact.wxml 发布互动页面-->
 <view>
 <view>
   <form bindsubmit="bindFormSubmit">

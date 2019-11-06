@@ -1,11 +1,11 @@
-// pages/details/details.js
+// pages/signIn/signIn.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    integralNum: 75
   },
 
   /**

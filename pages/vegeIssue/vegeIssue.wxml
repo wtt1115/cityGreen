@@ -1,0 +1,58 @@
+<!--pages/vegeDetails/vegeDetails.wxml 蔬菜发布编辑-->
+<view class="igs-flex">
+  <view class="w_infomation">
+    <view class="contentClass clearfix">
+      <view class="fontClass">发布标题</view>
+      <input class="inputClass" auto-focus maxlength="30" name="title" bindinput="titleInput"/>
+    </view>
+    <view class="contentClass clearfix">
+      <view class="fontClass">联系人</view>
+      <input class="inputClass" maxlength="30" name="contacts" bindinput="contactsInput"/>
+    </view>
+    <view class="contentClass clearfix">
+      <view class="fontClass">联系地址</view>
+      <input class="inputClass" maxlength="100" name="address" bindinput="addressInput"/>
+    </view>
+    <view class="contentClass clearfix">
+      <view class="fontClass2">简介</view>
+      <textarea class="inputClass2" maxlength="100" name="describe" bindinput="describeInput"/>
+    </view>
+  </view>
+  <!-- 单选 -->
+  <view class='select-only f30'>
+    <view class='flexa flexa2 igs-flex' data-selectIndex='0' bindtap='selectFn'>
+      <view class="so-3 flexca {{selectIndex==0?'active1':''}}">
+        <view class="so-2 {{selectIndex==0?'active2':''}}"></view>
+      </view>
+      <text class="typeChoose">视频</text>
+    </view>
+    <view class='flexa igs-flex' data-selectIndex='1' bindtap='selectFn'>
+      <view class="so-3 flexca {{selectIndex==1?'active1':''}}" >
+        <view class="so-2 {{selectIndex==1?'active2':''}}"></view>
+      </view>
+      <text class="typeChoose">图片</text>
+    </view>
+  </view>
+  <!-- 选择视频 -->
+  <view wx:if="{{selectIndex==0}}" class="videoClass">
+    <video wx:if="{{videoSrc}}" src="{{videoSrc}}" class="video" bindtap="showHandle2"></video>
+    <image wx:else src="{{addVideo}}" bindtap="addVideoChange"></image>
+    <view wx:if="{{videoShow}}" class="fixBack2" bindtap="deleteChange2">
+      <image src="{{deleteSvg}}"></image>
+    </view>
+  </view>
+  <!-- 选择图片 -->
+  <view wx:else class="imgsArray igs-flex">
+    <view class="imgChangeList igs-flex" wx:for="{{imgChangeList}}" wx:key="{{index}}">
+      <image class="liImg {{imgsArray.length - 1 == index ? 'interval' : ''}}" src="{{item.images}}" bindtap="showHandle" id="{{index}}"></image>
+      <view wx:if="{{item.deleteStatus}}" class="fixBack" bindtap="deleteChange" id="{{index}}">
+        <image src="{{deleteSvg}}"></image>
+      </view>
+    </view>
+    <image class="addImg" src="{{addImg}}" bindtap="addImgChange"></image>
+  </view>
+  <!-- 立即发布 -->
+  <view class="goSubmit" bindtap="bindFormSubmit">
+    <button form-type="submit">立即发布</button>
+  </view>
+</view>

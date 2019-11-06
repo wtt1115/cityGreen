@@ -12,13 +12,13 @@
             </view>
             <view class="weui-tab__panel garden_cont">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                    <block wx:for="{{commandArraylist}}" wx:key="">
+                    <block wx:for="{{commandArraylist}}" wx:key="index">
                       <view class="interaction_cont_li">
                         <image class="userImg" src="{{item.userUrl}}"></image>
                         <view class="fz32">{{item.username}}</view>
                         <view>{{item.lovePointUser}}</view>
                         <view class="igs-flex igs-flex4">
-                          <image class="cont_img" wx:for="{{item.imgUrlLst}}" src="{{item}}"></image>
+                          <image class="cont_img" wx:for="{{item.imgUrlLst}}" wx:key="index" src="{{item}}"></image>
                         </view>
                         <view class="operation">
                           <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text><image class="operating_btn"  src="../../images/interaction/operating_btn_icon.png"></image>

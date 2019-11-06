@@ -1,0 +1,83 @@
+/* pages/invitation/invitation.wxss */
+.root{
+  width:100%;
+  height:100%;
+  position: relative;
+}
+.backgroundImage image{
+  height : 100%;
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 100;
+}
+.promptly{
+  display: flex;
+  padding: 0 60rpx;
+  position: absolute;
+  left: 0;
+  top: 840rpx;
+  z-index: 110;
+}
+.promptly button{
+  width: 615rpx;
+  height: 90rpx;
+  font-size:46rpx;
+  font-weight: bold;
+  color:#fff;
+  line-height: 80rpx;
+  text-align: center;
+  border-radius: 45rpx;
+  background: linear-gradient(to bottom, #ffcf00 3%, #ff9600 100%);
+  box-shadow: #ff8610 10px 10px 30px 5px ;
+}
+.foot{
+  display: flex;
+  padding: 0 40rpx;
+  position: absolute;
+  left: 0;
+  bottom: 36rpx;
+  z-index: 110;
+}
+.foot .shareBox{
+  margin-right: 70rpx;
+  position: relative;
+}
+.foot .shareBox image{
+  width: 390rpx;
+  height: 191rpx;
+}
+.foot .shareBox .shareTitle{
+  position: absolute;
+  top:40rpx;
+  left: 80rpx;
+}
+.shareTitle .shareQr{
+  font-size: 28rpx;
+  color:#ff7e00;
+  text-align: center;
+}
+.shareTitle .sharefriend{
+  font-size: 26rpx;
+  color:#ff7e00;
+  text-align: center;
+}
+.QRCodeBorder{
+  width: 150rpx;
+  height: 150rpx;
+  border: 10rpx solid #ffc500;
+  border-radius: 8rpx;
+}
+.knowCode{
+  text-align: center;
+  line-height: 20rpx;
+}
+.know{
+  font-size: 24rpx;
+  color: #fcff00;
+}
+.code{
+  font-size: 24rpx;
+  color: #fff;
+}

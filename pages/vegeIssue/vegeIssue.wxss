@@ -1,0 +1,144 @@
+/* pages/vegeDetails/vegeDetails.wxss */
+/* input输入框 */
+.w_infomation{
+  width: 100%;
+  height: 100%;
+  padding: 28rpx;
+}
+.w_infomation .contentClass{
+  padding: 40rpx;
+  border-bottom:  1rpx solid #f1f1f1;
+}
+.w_infomation .fontClass{
+  font-size: 32rpx;
+  color:#7c838d;
+  float: left;
+  margin-right: 60rpx;
+}
+.fontClass2{
+  font-size: 32rpx;
+  color:#7c838d;
+}
+.w_infomation .inputClass{
+  font-size: 32rpx;
+  color:#121922;
+}
+.inputClass2{
+  font-size: 32rpx;
+  color:#121922;
+  width: 100%;
+  height: 116rpx;
+  margin-top: 20rpx
+}
+/* 单选 */
+.select-only{
+  width: 100%;
+  display: flex;
+  margin-top: 30rpx;
+  margin-left: 40rpx;
+  margin-bottom: 46rpx;
+}
+.so-3{
+  width: 30rpx;
+  height: 30rpx;
+  border-radius: 50%;
+  border: 1px solid #7C7C7C;
+  margin-right: 20rpx;
+}
+.so-2{
+  width: 18rpx;
+  height: 18rpx;
+  border-radius: 50%;
+}
+.flexa2{
+  margin-right: 40rpx;
+}
+.typeChoose{
+  font-size: 32rpx;
+  color:#7c838d;
+  line-height: 20rpx;
+}
+.select-only .active1{
+  border: 1px solid #00dab7;
+}
+.select-only .active2{
+  margin: 4rpx auto;
+  background:#00dab7
+}
+/* 视频 */
+.videoClass{
+  margin: 0 auto;
+  position: relative;
+}
+.videoClass video, .videoClass image{
+  width: 571rpx;
+  height: 330rpx;
+  border-radius: 20rpx;
+}
+.fixBack2{
+  width: 571rpx;
+  height: 60rpx;
+  background: #000000;
+  opacity: 0.58;
+  position: absolute;
+  bottom: 17rpx;
+  left: 0;
+  z-index: 100;
+  text-align: center;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+}
+.fixBack2 image{
+  width: 40rpx;
+  height: 45rpx;
+}
+/* 图片 */
+.imgsArray{
+  margin: 0 auto;
+  width: 571rpx;
+  border: 2rpx dotted #e6e8e7;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+.addImg, .liImg{
+  display: block;
+  width: 158rpx;
+  height: 158rpx;
+}
+.interval{
+  margin-right: 0
+}
+.imgChangeList{
+  margin-right: 10rpx;
+  margin-bottom: 10rpx;
+  position: relative;
+}
+.fixBack{
+  width: 158rpx;
+  height: 42rpx;
+  background: #000000;
+  opacity: 0.58;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  line-height: 40rpx;
+}
+.fixBack image{
+  width: 20rpx;
+  height: 25rpx;
+}
+/* 立即发布 */
+.goSubmit{
+  margin-top: 200rpx;
+  width: 100%;
+}
+.goSubmit button{
+  width: 100%;
+  height: 98rpx;
+  background:#fe7b07;
+  font-size: 36rpx;
+  color:#fff;
+  line-height: 100rpx;
+  text-align: center;
+}

@@ -4,7 +4,7 @@
     <image class="interaction_top_img" src="../../images/interaction/banner_icon.png"></image>
   </view>
   <view class="interaction_cont">
-   <block wx:for="{{commandArraylist}}" wx:key="">
+   <block wx:for="{{commandArraylist}}" wx:key="index">
       <view class="interaction_cont_li">
         <image class="userImg" src="{{item.userUrl}}"></image>
         <view class="fz32">{{item.username}}</view>

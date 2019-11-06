@@ -1,0 +1,72 @@
+/* pages/integralDetails/integralDetails.wxss */
+.integralBack{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #eaebf1;
+}
+.integralImg{
+  width: 100%;
+  height: 353rpx;
+  display: flex;
+  flex-direction: column;        /*元素的排列方向为垂直*/ 
+  justify-content: center;    /*水平居中对齐*/
+  align-items: center;
+  color:#ffffff;
+  text-align: center;
+}
+.smallFont{
+  font-size: 27rpx;
+}
+.bigFont{
+  font-size: 73rpx;
+  font-weight: bold;
+}
+.integralArray{
+  position: fixed;
+  top:300rpx;
+  left:30rpx;
+  z-index: 100;
+  width: 692rpx;
+}
+.inteList{
+  background: #fff;
+  overflow-y: scroll;
+}
+::-webkit-scrollbar{
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.inteTitle{
+  padding:30rpx;
+  font-size: 32rpx;
+  background: #fff;
+  color:#666;
+  font-weight: bold;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+.inteListLi{
+  padding: 30rpx;
+  border-bottom: 1rpx solid #f1f1f1;
+  position: relative;
+}
+.li_title{
+  font-size: 30rpx;
+  color: #333333;
+}
+.li_time{
+  font-size: 20rpx;
+  color: #a9a9a9;
+}
+.li_number{
+  font-size: 30rpx;
+  color: #fd1200;
+  font-weight: bold;
+  position: absolute;
+  top:40rpx;
+  right: 40rpx;
+}
+.borderNo{
+  border: 0;
+}

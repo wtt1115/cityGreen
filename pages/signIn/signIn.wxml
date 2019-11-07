@@ -10,8 +10,10 @@
     <image class="arrow" src="../../images/signInImg/arrow.png"></image>
   </view>
   <!-- 点我签到 -->
-  <view class="butSign"></view>
-  <view class="cont">点我签到</view>
+  <view wx:if="{{signShow}}" bindtap="butSignHandle">
+    <view class="butSign"></view>
+    <view class="cont">点我签到</view>
+  </view>
     <!-- 日历表 -->
   <view class="calendar">
     <view class="topBox">
@@ -28,9 +30,14 @@
       </view>
       <view class="dayClass igs-flex">
         <block wx:for="{{dayList}}" wx:key="{{index}}">
-          <text data-num="1" class="itemclass2 {{dayList.length-1 == index ? 'marginNo2': 'dayItem'}}">
-            {{item.dayHao}}
-          </text>
+          <view class="liclass">
+            <view class="itemclass2 {{dayList.length-1 == index ? 'marginNo2': (index == 0 ? weekIndex : 'dayItem')}}">
+              {{item.dayHao}}
+            </view>
+            <image wx:if="{{item.status == 'success'}}" class="sucSvgSize {{index == 0 ? sucSvgIndex : 'sucSvg'}}"     src="../../images/signInImg/success.png"></image>
+            <image wx:if="{{item.status == 'error'}}" class="errSvgSize {{index == 0 ? errSvgIndex : 'errSvg'}}" src="../../images/signInImg/error.png"></image>
+            <image wx:if="{{item.status == 'open'}}" class="openSvgSize {{index == 0 ? openSvgIndex : 'openSvg'}}" src="../../images/signInImg/today.png"></image>
+          </view>
         </block>
       </view>
     </view> 

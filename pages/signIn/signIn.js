@@ -12,8 +12,10 @@ Page({
     week: ['一', '二', '三', '四', '五', '六', '日'],
     dayList: [],
     weekIndex:0,
-    distance: '',
-    _num:0
+    sucSvgIndex:0,
+    openSvgIndex:0,
+    nowHao: new Date().getDate(),
+    signShow: true
   },
 
   /**
@@ -34,7 +36,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    this.data.dayList.forEach((value) => {
+      if (value.dayHao == this.data.nowHao && value.status == 'success') {
+        this.setData({
+          signShow: false
+        })
+      }
+    })
+  },
+  butSignHandle: function () {
+    this.data.dayList.forEach((value) => {
+      if (value.dayHao == this.data.nowHao) {
+        value.status = 'success';
+      }
+    })
+    this.setData({
+      dayList: this.data.dayList,
+      signShow: false
+    })
   },
   gointegralDetails: function() {
     wx.navigateTo({
@@ -68,31 +87,43 @@ Page({
     var dayArray = []
     for (var i = 0; i < daySize.length; i++) {
       var weekValue = this.getWeekDayNextMonth(i+1);
-      dayArray.push({ dayHao: i + 1, week: weekValue})
+      dayArray.push({ dayHao: i + 1, week: weekValue, status:''})
     }
     this.setData({
       dayList: dayArray
     })
-    var weekIndex = this.data.dayList[0].week
-    if (weekIndex == 0) {
-      this.setData({ weekIndex: 0 })
-    } else if (weekIndex == 1) {
-      this.setData({ weekIndex: 1 })
-    } else if (weekIndex == 2) {
-      this.setData({ weekIndex: 2 })
-    } else if (weekIndex == 3) {
-      this.setData({ weekIndex: 3 })
-    } else if (weekIndex == 4) {
-      this.setData({ weekIndex: 4 })
-    } else if (weekIndex == 5) {
-      this.setData({ weekIndex: 5 })
-    } else if (weekIndex == 6) {
-      this.setData({ weekIndex: 6 })
-    }
+    var weekIndex = 0;
+    this.data.dayList.forEach((value, index) =>{
+      // 判断每个月1号要增加的类名
+      if (value.dayHao == 1) {
+        weekIndex = value.week;
+        this.setData({
+          weekIndex: 'weekDistance' + weekIndex,
+          sucSvgIndex: 'sucSvg' + weekIndex,
+          errSvgIndex: 'errSvg' + weekIndex,
+          openSvgIndex: 'openSvg' + weekIndex
+        })
+      }
+      // 判断签到类型展示图标：类型：success:签到；error:未签到；open: 当天未签到
+      if (value.dayHao == this.data.nowHao) {
+        value.status = 'open'
+      }
+      // 此处模拟数据
+      if (value.dayHao < this.data.nowHao) {
+        value.status = 'error';
+      }
+      if (value.dayHao == 3 || value.dayHao == 4 || value.dayHao == 5) {
+        value.status = 'success';
+      }
+    })
+    this.setData({
+      dayList: this.data.dayList,
+      signShow: true
+    })
   },
   // 根据日期获取对应的星期
   getWeekDayNextMonth: function(n) {
-    return new Date(this.data.year, this.data.month - 1, n).getDay()
+    return new Date(this.data.year, this.data.month-1, n).getDay()
   },
   /**
    * 生命周期函数--监听页面隐藏

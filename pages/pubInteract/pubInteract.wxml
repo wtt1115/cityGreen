@@ -10,7 +10,7 @@
     <view class="imgsArray igs-flex">
       <view wx:for="{{imgChangeList}}" wx:key="{{index}}" >
       <view class="imgChangeList">
-        <image class="imgChangeList.length - 1 == index ? 'interval' : ''" src="{{item.images}}" bindtap="showHandle" id="{{index}}"></image>
+        <image class="imgChangeList.length - 1 == index ? 'interval' : ''" src="{{item.images}}" mode="widthFix" bindtap="showHandle" id="{{index}}"></image>
         <view wx:if="{{item.deleteStatus}}" class="fixBack" bindtap="deleteChange" id="{{index}}">
           <image src="{{deleteSvg}}"></image>
         </view>

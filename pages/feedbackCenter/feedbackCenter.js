@@ -1,11 +1,16 @@
 // pages/garden/garden.js
 Page({
   data: {
-   
-
+    textValue: ''
   },
   onLoad: function () {
 
+  },
+  bindFormSubmit: function (e) {
+    var textValue = e.detail.value.textarea;
+    this.setData({
+      textValue: textValue
+    })
   },
   loadData: function () {
     setTimeout(function () {

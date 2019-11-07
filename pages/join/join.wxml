@@ -4,12 +4,12 @@
     <view class="page_hd">
       <image class="page_hd_img" mode="widthFix" style="width:100%;height:auto" src="https://img.gdoil.cn/upload/hd/dieselOilShop/kache_bg.png"></image>
       <view class="yaoqing" wx:if="{{!type}}">
-        <!-- <image class="yaoqing_img" src="../../images/truck_home/yaoqingjiaru_bg.png"></image> -->
+        <image class="yaoqing_img" src="../../images/yaoqingjiaru_bg.png"></image>
         <view >用户 {{phonenumber}} 邀请您加入卡车之家</view>
       </view>
     </view>
     <view class="[page_bd,{{type ? 'mt':''}}] " >
-      <!-- <image class="page_hd_img" src="../../images/truck_home/erweima_bg.png"></image> -->
+      <image class="page_hd_img" src="../../images/erweima_bg.png"></image>
       <view class="cont-title cont_common">卡车之家</view>
        <view class="cont_welcome cont_common">加入卡车之家会员,惊喜不断</view>
       <view class="cont_btn cont_common">

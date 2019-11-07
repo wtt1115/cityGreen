@@ -56,9 +56,10 @@
 }
 .calendar{
   position: absolute;
-  left: 30rpx;
-  top: 550rpx;
+  top: 48%;
   z-index: 110;
+  left:50%;
+  margin-left:-345rpx;
 }
 .topBox{
   width: 690rpx;
@@ -108,22 +109,188 @@
   margin: 0;
 }
 .itemclass2{
+  display: block;
   width: 70rpx;
   height: 70rpx;
-  line-height: 70rpx;
 }
 .dayClass{
   margin: 0 30rpx;
   font-size: 24rpx;
   color:#666666;
   text-align: center;
+  padding-top: 10rpx;
+  padding-bottom: 20rpx;
 }
 .dayItem{
   margin-right: 20rpx;
 }
-.itemclass2:nth-child(1){
-  margin-left: 360rpx;
-}
+/* .itemclass2:nth-child(1){
+  margin-left: 540rpx;
+} */
 .marginNo2{
   margin: 0;
+}
+
+.liclass{
+  position: relative;
+}
+.sucSvgSize{
+  width: 30rpx;
+  height: 30rpx;
+}
+.errSvgSize{
+  width: 24rpx;
+  height: 24rpx;
+}
+.openSvgSize{
+  width: 71rpx;
+  height: 67rpx;
+}
+.sucSvg{
+  position: absolute;
+  top:22rpx;
+  left: 25rpx;
+}
+.errSvg{
+  position: absolute;
+  top:32rpx;
+  left: 22rpx;
+}
+.openSvg{
+  position: absolute;
+  top:-16rpx;
+  left: -2rpx;
+}
+/* 根据每月一号要调整的样式 */
+.weekDistance1{
+  margin:0;
+  margin-right: 21rpx;
+}
+.weekDistance2{
+  margin-left: 88rpx;
+  margin-right: 21rpx;
+}
+.weekDistance3{
+  margin-left: 178rpx;
+  margin-right: 21rpx;
+}
+.weekDistance4{
+  margin-left: 268rpx;
+  margin-right: 21rpx;
+}
+.weekDistance5{
+  margin-left: 360rpx;
+  margin-right: 21rpx;
+}
+.weekDistance6{
+  margin-left: 450rpx;
+  margin-right: 21rpx;
+}
+.weekDistance0{
+  margin-left: 540rpx;
+}
+.sucSvg1{
+  position: absolute;
+  top:22rpx;
+  left: 21rpx;
+}
+.sucSvg2{
+  position: absolute;
+  top:22rpx;
+  left: 110rpx;
+}
+.sucSvg3{
+  position: absolute;
+  top:22rpx;
+  left: 200rpx;
+}
+.sucSvg4{
+  position: absolute;
+  top:22rpx;
+  left: 292rpx;
+}
+.sucSvg5{
+  position: absolute;
+  top:22rpx;
+  left: 385rpx;
+}
+.sucSvg6{
+  position: absolute;
+  top:22rpx;
+  left: 475rpx;
+}
+.sucSvg0{
+  position: absolute;
+  top:22rpx;
+  left: 564rpx;
+}
+.errSvg1{
+  position: absolute;
+  top:32rpx;
+  left: 21rpx;
+}
+.errSvg2{
+  position: absolute;
+  top:32rpx;
+  left: 110rpx;
+}
+.errSvg3{
+  position: absolute;
+  top:32rpx;
+  left: 200rpx;
+}
+.errSvg4{
+  position: absolute;
+  top:32rpx;
+  left: 292rpx;
+}
+.errSvg5{
+  position: absolute;
+  top:32rpx;
+  left: 385rpx;
+}
+.errSvg6{
+  position: absolute;
+  top:32rpx;
+  left: 475rpx;
+}
+.errSvg0{
+  position: absolute;
+  top:32rpx;
+  left: 14rpx;
+}
+.openSvg1{
+  position: absolute;
+  top:-16rpx;
+  left: -1rpx;
+}
+.openSvg2{
+  position: absolute;
+  top:-16rpx;
+  left: 86rpx;
+}
+.openSvg3{
+  position: absolute;
+  top:-16rpx;
+  left: 178rpx;
+}
+.openSvg4{
+  position: absolute;
+  top:-16rpx;
+  left:348rpx;
+}
+.openSvg5{
+  position: absolute;
+  top:-16rpx;
+  left: 360rpx;
+}
+.openSvg6{
+  position: absolute;
+  top:-16rpx;
+  left: 448rpx;
+}
+.openSvg0{
+  position: absolute;
+  top:-16rpx;
+  left: 540rpx;
 }

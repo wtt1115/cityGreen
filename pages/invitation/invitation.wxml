@@ -3,8 +3,8 @@
   <view  class="backgroundImage">
     <image src="{{backgroundImg}}"></image>
   </view>
-  <view class="promptly" bindtap="butSubmit">
-    <button>立即邀请</button>
+  <view class="promptly">
+    <button open-type="share">立即邀请</button>
   </view>
   <view class="foot">
     <!-- 分享 -->

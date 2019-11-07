@@ -30,8 +30,30 @@ Page({
   onShow: function () {
 
   },
-  butSubmit: function () {
-    console.log(22)
+  /**
+     *转发分享
+     */
+  onShareAppMessage: function (ops) {
+    if (ops.from === 'button') {
+      // 来自页面内转发按钮
+      // console.log(ops)
+    }
+    var that = this;
+    //小程序线上环境分享成功后回调里函数不回调（官方调整）点击分享按钮就给分享数量+1
+    return {
+      title: '邀请好友，赢好礼赚积分！',
+      path: '/pages/default/default', //邀请链接进入登录注册页面 参数到对应页面options接收 
+      imageUrl: '../../images/banner_icon.png',
+      success: function (res) {
+        // 转发成功
+        // console.log("转发成功:" + JSON.stringify(res));
+      },
+      fail: function (res) {
+        // 转发失败
+        // console.log("转发失败:" + JSON.stringify(res));
+      }
+    }
+
   },
 
   /**

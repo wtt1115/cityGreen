@@ -1,7 +1,7 @@
 <!--pages/myDishes/myDishes.wxml 我的菜品页面-->
 <view class="myDishesBox">
   <scroll-view class="dishesSelectBox" scroll-y="true" style="height:{{ windowHeight - 100 }}rpx">
-    <view wx:for="{{dishesSelectList}}" wx:key="{{index}}">
+    <view bindtap='toDetails' wx:for="{{dishesSelectList}}" wx:key="{{index}}">
       <view class="liList">
         <view class="leftBox">
           <image class="" mode="aspectFill" src="{{item.images}}"/>

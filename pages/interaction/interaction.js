@@ -7,6 +7,8 @@ Page({
   data: {
     showInput:false,
     inputVal:'',
+    top:'',
+    sendcolor:false,//发送按钮颜色
     commandArraylist: [
       {
         showBtn: false,
@@ -156,16 +158,23 @@ Page({
       commandArraylist: this.data.commandArraylist
     })
   },
+  //点赞+1
+  like(){
+    console.log('点赞+1');
+  },
   //评价
   discuss(e){
     var index = e.currentTarget.dataset.bindex;
     console.log(e)
+    var top =e.detail.x;//获取键盘高度定位
+    console.log(top)
     if (this.data.commandArraylist[index].showBtn) {
       this.data.commandArraylist[index].showBtn = false;
     } else {
       this.data.commandArraylist[index].showBtn = true;
     }
     this.setData({
+      top: top+'px',
       showInput: true,
       commandArraylist: this.data.commandArraylist
     })
@@ -173,9 +182,17 @@ Page({
   //输入
   bindinput(e){
     console.log(e.detail.value);
-    this.setData({
-      inputVal: e.detail.value
-    });
+    if (e.detail.value.length>0){
+      this.setData({
+        inputVal: e.detail.value,
+        sendcolor:true
+      });
+    }else{
+      this.setData({
+        sendcolor: false
+      });
+    }
+   
   },
   send(){
     var inputVal = this.data.inputVal;
@@ -187,7 +204,8 @@ Page({
   inputBlur(){
     console.log(11111)
     this.setData({
-      showInput: false
+      showInput: false,
+      top: '-200px'
     })
   },
   // 去发布

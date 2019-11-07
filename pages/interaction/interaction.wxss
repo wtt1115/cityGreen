@@ -20,7 +20,7 @@
   height:100%;
 }
 .interaction_cont{
-  padding:0 40rpx 0 100rpx;
+  padding:0 40rpx 40rpx 100rpx;
 }
 .interaction_cont_li{
   position:relative;
@@ -89,15 +89,19 @@
   padding:20rpx 10px;
 }
 .send_btn{
-  float: right;
-  padding:10rpx 40rpx;
-  border:1px solid #ddd;
-  color:#ddd;
-  border-radius: 30rpx;
+  width:100rpx;
+  height:50rpx;
+  line-height:50rpx;
+  border:1px solid rgb(0,218,183);
+  color:rgb(0,218,183);
+  border-radius: 25rpx;
+  text-align: center;
+  margin-top:30rpx;
 }
 .inputs{
-  width:100%;
-  padding:20rpx;
+  flex:1;
+  padding:0 10rpx;
+  margin:30rpx 0;
 }
 .hidenIuput{
   position: absolute;
@@ -108,5 +112,9 @@
 .showInput{
   position:fixed;
   z-index:100;
-  top:35%;
+   /* top:240px;-20 */
+}
+.sendcolor{
+  background: rgb(0,218,183);
+  color:#fff;
 }

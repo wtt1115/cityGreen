@@ -85,6 +85,11 @@ Page({
   bindSubmit: function () {
     console.log(22)
   },
+  toDetails(){
+    wx.navigateTo({
+      url: '/pages/vegeDetails/vegeDetails',
+    })
+  },
   /**
    * 生命周期函数--监听页面隐藏
    */

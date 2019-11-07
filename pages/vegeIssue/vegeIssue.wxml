@@ -44,7 +44,7 @@
   <!-- 选择图片 -->
   <view wx:else class="imgsArray igs-flex">
     <view class="imgChangeList igs-flex" wx:for="{{imgChangeList}}" wx:key="{{index}}">
-      <image class="liImg {{imgsArray.length - 1 == index ? 'interval' : ''}}" src="{{item.images}}" bindtap="showHandle" id="{{index}}"></image>
+      <image class="liImg {{imgsArray.length - 1 == index ? 'interval' : ''}}" mode="widthFix" src="{{item.images}}" bindtap="showHandle" id="{{index}}"></image>
       <view wx:if="{{item.deleteStatus}}" class="fixBack" bindtap="deleteChange" id="{{index}}">
         <image src="{{deleteSvg}}"></image>
       </view>

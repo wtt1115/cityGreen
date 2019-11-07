@@ -89,42 +89,32 @@ Page({
     wx.chooseImage({
       sizeType: ['original', 'compressed'],  //可选择原图或压缩后的图片
       sourceType: ['album', 'camera'], //可选择性开放访问相册、相机
+      count: 9,
       success: res => {
         var imgSize = res.tempFiles[0].size;
         // 图片小于2M,图片数组长度限制9张
-        var imgsArray = that.data.imgChangeList;
-        if (imgsArray.length < 9) {
-          if (imgSize <= 2000000) {
-            imgsArray.push({ images: res.tempFilePaths[0], deleteStatus: false });
-            that.setData({
-              imgChangeList: imgsArray
-            })
-          } else {
-            wx.showToast({
-              title: '限上传2M的图片哟',
-              icon: 'none',
-              duration: 2000
-            })
-          }
-        } else {
-          wx.showToast({
-            title: '限上传9张图片哟',
-            icon: 'none',
-            duration: 2000
-          })
-        }
+        res.tempFilePaths.forEach((value) => {
+          that.data.imgChangeList.push({ images: value, deleteStatus: false });
+        })
+        that.setData({
+          imgChangeList: that.data.imgChangeList
+        })
       }
     })
   },
-  showHandle: function(e) {
-    var imgsArray = this.data.imgChangeList;
-    imgsArray.forEach((value, index) => {
+  showHandle: function (e) {
+    var imgChangeList = this.data.imgChangeList;
+    imgChangeList.forEach((value, index) => {
       if (index == e.currentTarget.id) {
-        value.deleteStatus = true;
+        if (value.deleteStatus == true) {
+          value.deleteStatus = false;
+        } else if (value.deleteStatus == false) {
+          value.deleteStatus = true;
+        }
       }
     })
     this.setData({
-      imgChangeList: imgsArray
+      imgChangeList: imgChangeList
     })
   },
   deleteChange: function (e) {

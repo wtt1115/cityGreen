@@ -43,7 +43,7 @@ Page({
     return {
       title: '邀请好友，赢好礼赚积分！',
       path: '/pages/default/default', //邀请链接进入登录注册页面 参数到对应页面options接收 
-      imageUrl: '',
+      imageUrl: '../../images/banner_icon.png',
       success: function (res) {
         // 转发成功
         // console.log("转发成功:" + JSON.stringify(res));

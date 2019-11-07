@@ -5,7 +5,7 @@
     <image src="../../images/signInImg/backImg.png"></image>
   </view>
   <!-- 我的积分 -->
-  <view class="myIntegral">
+  <view class="myIntegral" bindtap="gointegralDetails">
     我的积分: {{integralNum}}分
     <image class="arrow" src="../../images/signInImg/arrow.png"></image>
   </view>
@@ -14,5 +14,25 @@
   <view class="cont">点我签到</view>
     <!-- 日历表 -->
   <view class="calendar">
+    <view class="topBox">
+      <text class="signDayClass">您已累计签到<text class="signDayFont">{{signDay}}</text>天</text>
+      <text class="currentYears">
+        <text>{{year}}年{{month}}月</text>
+      </text>
+    </view>
+    <view class="contBox">
+      <view class="weekClass igs-flex">
+        <block wx:for="{{week}}" wx:key="{{index}}">
+          <text class="itemclass {{week.length-1 == index ? 'marginNo': 'weekItem'}}">{{item}}</text>
+        </block>
+      </view>
+      <view class="dayClass igs-flex">
+        <block wx:for="{{dayList}}" wx:key="{{index}}">
+          <text class="itemclass2 {{dayList.length-1 == index ? 'marginNo2': 'dayItem'}}">
+            {{item.dayHao}}
+          </text>
+        </block>
+      </view>
+    </view> 
   </view>
 </view>

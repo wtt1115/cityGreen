@@ -26,15 +26,6 @@
   height: 26rpx;
   margin-left: 20rpx;
 }
-.calendar{
-  position: absolute;
-  left: 30rpx;
-  top: 550rpx;
-  z-index: 110;
-  width: 690rpx;
-  height: 603rpx;
-  border:1rpx solid #f1f1f1;
-}
 .butSign{
   position: absolute;
   right: 30rpx;
@@ -44,7 +35,7 @@
   height: 198rpx;
   border-radius: 50%;
   background: #fff;
-  opacity: 0.1;
+  opacity: 0.2;
 } 
 .cont{
   position: absolute;
@@ -59,7 +50,80 @@
   font-size: 32rpx;
   color:#fff;
   text-align: center;
-  padding:20rpx 41rpx;
+  padding:26rpx 41rpx;
   letter-spacing:6rpx;
   text-shadow:2px 2px #e69d00;
+}
+.calendar{
+  position: absolute;
+  left: 30rpx;
+  top: 550rpx;
+  z-index: 110;
+}
+.topBox{
+  width: 690rpx;
+  height: 90rpx;
+  background: #f3f3f6;
+  padding: 10rpx 20rpx;
+  position: relative;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.signDayClass{
+  font-size: 24rpx;
+  color:#9a9a9a;
+}
+.signDayFont{
+  color:#fe5f25;
+  padding: 5rpx;
+}
+.currentYears{
+  font-size: 30rpx;
+  color:#303030;
+  position: absolute;
+  top: 18rpx;
+  left: 276rpx;
+}
+.contBox{
+  width: 690rpx;
+  /* height: 520rpx; */
+  background: #fff;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.weekClass{
+  border-bottom: 1rpx solid #f1f1f1;
+  margin: 0 30rpx;
+  font-size: 24rpx;
+  color:#9a9a9a;
+  text-align: center;
+}
+.itemclass{
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.weekItem{ 
+  margin-right: 20rpx;
+}
+.marginNo{
+  margin: 0;
+}
+.itemclass2{
+  width: 70rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+}
+.dayClass{
+  margin: 0 30rpx;
+  font-size: 24rpx;
+  color:#666666;
+  text-align: center;
+}
+.dayItem{
+  margin-right: 20rpx;
+}
+.itemclass2:nth-child(1){
+  margin-left: 360rpx;
+}
+.marginNo2{
+  margin: 0;
 }

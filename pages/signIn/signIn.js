@@ -12,7 +12,8 @@ Page({
     week: ['一', '二', '三', '四', '五', '六', '日'],
     dayList: [],
     weekIndex:0,
-    distance: ''
+    distance: '',
+    _num:0
   },
 
   /**

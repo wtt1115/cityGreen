@@ -1,16 +1,17 @@
+<!--pages/replaceService/replaceService.wxml-->
 <view class="page">
     <view class="page__bd">
     <image class="add_img" bindtap='toadd' src="../../images/add_icon.png"></image>
     <!-- 预约服务 -->
     <view class="list" wx:for="{{list}}">
       <view class="items">
-        预约主题：<text>肥料</text>
+        更换主题：<text>更换菜品</text>
       </view>
       <view class="items">
-        预约内容：<text>肥料已经用完，请送肥料过来。</text>
+        服务内容：<text>青菜死掉4篮，请麻烦更换一下，谢谢！</text>
       </view>
       <view class="items">
-        预约时间：<text>2019-10-21  08:00:00</text>
+        服务时间：<text>2019-10-21  08:00:00</text>
       </view>
       <view class="items">
         联系人：<text>张三</text>

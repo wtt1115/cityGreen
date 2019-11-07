@@ -1,3 +1,4 @@
+/* pages/replaceService/replaceService.wxss */
 .page__bd{
   padding:20rpx 0;
 }

@@ -34,30 +34,39 @@ Page({
     ],
     menuList:[
       {
+        url:'/pages/myDishes/myDishes',
         menuImg: '../../images/myImg/myCaiping.png',
         menuName: '我的菜品',
       }, {
+        url: '/pages/integralDetails/integralDetails',
         menuImg: '../../images/myImg/my_integral.png',
         menuName: '我的积分',
       }, {
+        url: '/pages/myInfo/myInfo',
         menuImg: '../../images/myImg/myMessage.png',
         menuName: '我的信息',
       }, {
+        url: '/pages/invitation/invitation',
         menuImg: '../../images/myImg/invite.png',
         menuName: '邀请有礼',
       }, {
+        url: '/pages/tipService/tipService',
         menuImg: '../../images/myImg/remindService.png',
         menuName: '提醒服务',
       }, {
+        url: '/pages/reservationService/reservationService',
         menuImg: '../../images/myImg/reservationService .png',
         menuName: '预约服务',
       }, {
+        url: '/pages/replaceService/replaceService',
         menuImg: '../../images/myImg/replaceService.png',
         menuName: '更换服务',
       }, {
+        url: '/pages/contactUs/contactUs',
         menuImg: '../../images/myImg/contactUs.png',
         menuName: '联系我们',
       }, {
+        url: '/pages/feedbackCenter/feedbackCenter',
         menuImg: '../../images/myImg/feedbackCenter.png',
         menuName: '反馈中心',
       }
@@ -77,7 +86,25 @@ Page({
       wx.stopPullDownRefresh() //停止下拉刷新
     }, 1000)
   },
-
+  //签到
+  toSignIn() {
+    wx.navigateTo({
+      url: '/pages/signIn/signIn',
+    })
+  },
+  toMenu(e){
+    var setMealType = e.currentTarget.dataset.setMealType;
+    wx.navigateTo({
+      url: '/pages/setMealDetails/setMealDetails?setMealType:' + setMealType,
+    })
+  },
+  toPage(e){
+    console.log(e)
+    var url = e.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: url,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

@@ -1,21 +1,36 @@
 <!--pages/interaction/interaction.wxml-->
 <view class="interaction">
+  <image class="add_img" bindtap='toadd' src="../../images/add_icon.png"></image>
   <view class="interaction_top">
-    <image class="interaction_top_img" src="../../images/interaction/banner_icon.png"></image>
+    <image class="interaction_top_img" src="../../images/banner_icon.png"></image>
   </view>
   <view class="interaction_cont">
-   <block wx:for="{{commandArraylist}}" wx:key="index">
+   <block wx:for="{{commandArraylist}}" wx:key="{{index}}" wx:for-index="bindex">
       <view class="interaction_cont_li">
         <image class="userImg" src="{{item.userUrl}}"></image>
         <view class="fz32">{{item.username}}</view>
         <view>{{item.lovePointUser}}</view>
-        <view class="igs-flex igs-flex4">
-          <image class="cont_img" wx:for="{{item.imgUrlLst}}" src="{{item}}"></image>
+        <view class="igs-flex">
+          <image class="cont_img" wx:for="{{item.imgUrlLst}}" wx:key="{{index}}" src="{{item}}"></image>
         </view>
         <view class="operation">
-          <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text><image class="operating_btn"  src="../../images/interaction/operating_btn_icon.png"></image>
+          <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text>
+          <image class="operating_btn" bindtap='operating'  data-bindex='{{bindex}}'  src="../../images/operating_btn_icon.png"></image>
+          <view class="btn_box igs-flex" wx:if="{{item.showBtn}}">
+            <view class="like_btn">
+                <text>点赞</text>
+                <!-- <text>取消</text> -->
+            </view>
+             <view class="discuss_btn" bindtap='discuss'  data-bindex='{{bindex}}' >
+                <text>评价</text>
+            </view>
+          </view>
         </view>
       </view>
     </block>
+    <view class="input_box hidenIuput  {{ showInput ? 'showInput':''}}">
+      <input bindinput="bindinput" type='text' class="inputs" focus='{{showInput}}'  bindblur="inputBlur" placeholder="请输入评价内容" />
+      <text class="send_btn" bindinput="send" >发送</text>
+    </view>
   </view>
 </view>

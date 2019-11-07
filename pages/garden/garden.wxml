@@ -1,6 +1,7 @@
 <!--pages/garden/garden.wxml-->
 <view class="page">
     <view class="page__bd">
+    <image class="add_img" bindtap='toadd' src="../../images/add_icon.png"></image>
         <view class="weui-tab">
             <view class="weui-navbar">
                 <block wx:for="{{tabs}}" wx:key="*this">
@@ -12,19 +13,49 @@
             </view>
             <view class="weui-tab__panel garden_cont">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
-                    <block wx:for="{{commandArraylist}}" wx:key="index">
-                      <view class="interaction_cont_li">
-                        <image class="userImg" src="{{item.userUrl}}"></image>
-                        <view class="fz32">{{item.username}}</view>
-                        <view>{{item.lovePointUser}}</view>
-                        <view class="igs-flex igs-flex4">
-                          <image class="cont_img" wx:for="{{item.imgUrlLst}}" wx:key="index" src="{{item}}"></image>
+                     <view class='CircleList'>
+                          <view class='body-view' wx:for='{{DataSource}}' wx:key="{{index}}">
+                            <view class='right-view'>
+                            <view class="igs-flex" style="margin-top:40rpx;">
+                            <view class='photo-view'>
+                                <video src="" style='width:100%'></video>
+                                <!-- http://ugcws.video.gtimg.com/uwMROfz2r5zIIaQXGdGnC2dfhzlvTAnhF6oxQxj00cDugkoy/g0725sweoz0.m701.mp4?vkey=FA0C7F55310681D23AADCC07E3B86F465FA2C8F6D3F4032F7D0F6ACBB837B70E74EFF79FE6B19745C4A01EC4C03523B29D24FE9936C62D2069CB36A269615AB83CCA90F47847CD0032A7FC10D0F22B7D9BE50B00D91B48EE8DCE2B47325BEE387B4101169BFB86DE35A8AA2BA62D6DB3 -->
+                              </view>
+
+                                <view class='user-content'>{{content}}</view>
+                            </view>
+                              <!-- 时间、删除按钮、点赞评论按钮 -->
+                              <view class='TDD-view g-main'>
+                                <label>2018-07-25 10:14:23</label>
+                                <button bindtap='delete'>删除</button>
+                                <image data-isShow='{{isShow}}' bindtap='TouchDiscuss' src='../../images/operating_btn_icon.png'></image>
+                              </view>
+
+                              <!-- 点赞 -->
+                              <view class='zan-view g-main'>
+                                <!-- <view class='trigon-view'>
+                                  <image mode='aspectFill' class='trigon' src='/images/trigon.png'></image>
+                                </view> -->
+
+                                <!-- 点赞 -->
+                                <view class='zan-bg-view'>
+                                  <view class='zan-user-view' wx:for='{{zanSource}}' wx:key="{{index}}">
+                                    <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
+                                  </view>
+                                </view>
+                                <view class='line'></view>
+                                <!-- 评论 -->
+                                <view class='discuss-view'>
+                                  <view class='discuss' wx:for='{{contnet}}' wx:key="{{index}}">
+                                    <label bindtap='TouchZanUser' data-name='{{item.firstname}}' class='discuss-user'>{{item.firstname}}：</label>
+                                    <label class='content'>{{item.content}}</label>
+                                  </view>
+                                </view>
+                              </view>
+                            </view>
+
+                          </view>
                         </view>
-                        <view class="operation">
-                          <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text><image class="operating_btn"  src="../../images/interaction/operating_btn_icon.png"></image>
-                        </view>
-                      </view>
-                    </block>
                 </view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 1}}">选项二的内容</view>
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>

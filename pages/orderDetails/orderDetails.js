@@ -7,10 +7,10 @@ Page({
   data: {
     detailsInfo:{
       imgUrls: [
-        '../../images/detailsImg/detailsOne.png',
-        '../../images/detailsImg/detailsOne.png',
-        '../../images/detailsImg/detailsOne.png',
-        '../../images/detailsImg/detailsOne.png'
+        '../../images/banner_icon.png',
+        '../../images/banner_icon.png',
+        '../../images/banner_icon.png',
+        '../../images/banner_icon.png'
       ],
       price: 2988,
       describe: '无土栽培设备阳台种菜神器无土栽培蔬菜水培水耕种植架管道种菜机'
@@ -22,32 +22,32 @@ Page({
     duration: 1000,
     currentTab: 0,
     shopDetailsImgs:[
-      '../../images/detailsImg/shopTwo.png', 
-      '../../images/detailsImg/shopThree.png',
-      '../../images/detailsImg/shopOne.png'
+      '../../images/banner_icon.png', 
+      '../../images/banner_icon.png',
+      '../../images/banner_icon.png'
     ],
     serConImgs: [
-      '../../images/detailsImg/serverOne.png', 
-      '../../images/detailsImg/serverOne.png'
+      '../../images/banner_icon.png', 
+      '../../images/banner_icon.png'
     ],
     dishesSelectList:[
       {
         id: 1,
-        images: '../../images/detailsImg/chooseOne.png',
+        images: '../../images/banner_icon.png',
         title: '自己阳台种的青菜1',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
         chooseStatus: 'false'
       },
       {
         id: 2,
-        images: '../../images/detailsImg/chooseOne.png',
+        images: '../../images/banner_icon.png',
         title: '自己阳台种的青菜2',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
-        chooseStatus: 'true'
+        chooseStatus: 'false'
       },
       {
         id: 3,
-        images: '../../images/detailsImg/chooseOne.png',
+        images: '../../images/banner_icon.png',
         title: '自己阳台种的青菜3',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
         chooseStatus: 'false'
@@ -115,11 +115,21 @@ Page({
 
   },
 
+  loadData: function () {
+    setTimeout(function () {
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1000)
+  },
   /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
+    * 页面相关事件处理函数--监听用户下拉动作
+    */
   onPullDownRefresh: function () {
-
+    wx.showNavigationBarLoading(); //在标题栏中显示加载
+    // this.setData({
+    //   //重置数据
+    // });
+    this.loadData();//下拉重新加载数据
   },
 
   /**

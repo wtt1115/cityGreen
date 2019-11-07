@@ -213,9 +213,6 @@ page {
   width: 150rpx;
   /* background: rebeccapurple; */
 }
-.right-view {
-  /* background: red; */
-}
 /* 头像 */
 .headPortrait {
   /* display: flex; */

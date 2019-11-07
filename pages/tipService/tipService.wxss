@@ -1,3 +1,6 @@
+.page__bd{
+  padding:20rpx 0;
+}
 .weui-form-preview__hd {
   padding: 0px 30rpx;
   line-height: 2em;
@@ -45,7 +48,7 @@
   color: #c68c1c;
 }
 .weui-form-preview {
-  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }
 .page__bd,
 page {

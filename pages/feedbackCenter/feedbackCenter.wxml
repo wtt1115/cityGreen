@@ -1,6 +1,6 @@
 <!--pages/feedbackCenter/feedbackCenter.wxml 反馈中心页面-->
 <view class="feedbackBox">
-  <form ><!--bindsubmit="bindFormSubmit"-->
+  <form bindsubmit="bindFormSubmit">
     <!-- 这一刻想法 -->
     <view class="thinkWay">
       <textarea placeholder="输入信息..." placeholder-class="place" name="textarea" maxlength="-1" value="{{textValue}}"/>

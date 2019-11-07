@@ -28,7 +28,7 @@
       </view>
       <view class="dayClass igs-flex">
         <block wx:for="{{dayList}}" wx:key="{{index}}">
-          <text class="itemclass2 {{dayList.length-1 == index ? 'marginNo2': 'dayItem'}}">
+          <text data-num="1" class="itemclass2 {{dayList.length-1 == index ? 'marginNo2': 'dayItem'}}">
             {{item.dayHao}}
           </text>
         </block>

@@ -1,0 +1,193 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+<<<<<<< HEAD
+		"autoAudits": false,
+		"coverView": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wxef5ca0f18c34db62",
+	"projectname": "cityGreens",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+=======
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx17fd521add2be40c",
+	"projectname": "cityGreens",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+>>>>>>> 184fecde6377a1400ad23876598e941964bf514f
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+<<<<<<< HEAD
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 15,
+=======
+			"list": []
+		},
+		"miniprogram": {
+			"current": -1,
+>>>>>>> 184fecde6377a1400ad23876598e941964bf514f
+			"list": [
+				{
+					"id": 0,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "首页",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "订单详情",
+					"pathName": "pages/orderDetails/orderDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 3,
+					"name": "菜园",
+					"pathName": "pages/garden/garden",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "互动",
+					"pathName": "pages/interaction/interaction",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发布互动页面",
+					"pathName": "pages/pubInteract/pubInteract",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "蔬菜详情",
+					"pathName": "pages/vegeDetails/vegeDetails",
+					"query": "",
+					"scene": null
+<<<<<<< HEAD
+				},
+				{
+					"id": 7,
+					"name": "蔬菜发布编辑页面",
+					"pathName": "pages/vegeIssue/vegeIssue",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "套餐详情",
+					"pathName": "pages/setMealDetails/setMealDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "更换服务新增",
+					"pathName": "pages/serverChange/serverChange",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的菜品页面",
+					"pathName": "pages/myDishes/myDishes",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "反馈中心",
+					"pathName": "pages/feedbackCenter/feedbackCenter",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "联系我们",
+					"pathName": "pages/contactUs/contactUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "邀请有礼页面",
+					"pathName": "pages/invitation/invitation",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "积分详情页面",
+					"pathName": "pages/integralDetails/integralDetails",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "签到页面",
+					"pathName": "pages/signIn/signIn",
+					"query": "",
+					"scene": null
+=======
+>>>>>>> 184fecde6377a1400ad23876598e941964bf514f
+				}
+			]
+		}
+	}
+}

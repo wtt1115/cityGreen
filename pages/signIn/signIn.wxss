@@ -56,9 +56,10 @@
 }
 .calendar{
   position: absolute;
-  left: 30rpx;
-  top: 570rpx;
+  top: 48%;
   z-index: 110;
+  left:50%;
+  margin-left:-345rpx;
 }
 .topBox{
   width: 690rpx;

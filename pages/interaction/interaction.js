@@ -5,14 +5,17 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showInput:false,
+    inputVal:'',
     commandArraylist: [
       {
+        showBtn: false,
         userUrl: '../../images/myImg/userImg.jpg',
         username: 'A善手教育咨询胡老师',
         time: '7分钟前',
         praiseFlag: false,
         lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
-        imgUrlLst: ['../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png'],
+        imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
         commandUserList: [
           {
             name: 'zero',
@@ -33,12 +36,13 @@ Page({
         ]
       },
       {
+        showBtn: false,
         userUrl: '../../images/myImg/userImg.jpg',
         username: 'A善手教育咨询胡老师',
         time: '7分钟前',
         praiseFlag: false,
         lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
-        imgUrlLst: ['../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png'],
+        imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
         commandUserList: [
           {
             name: 'zero',
@@ -59,12 +63,13 @@ Page({
         ]
       },
        {
+        showBtn: false,
         userUrl: '../../images/myImg/userImg.jpg',
         username: 'A善手教育咨询胡老师',
         time: '7分钟前',
         praiseFlag: false,
         lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
-        imgUrlLst: ['../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png', '../../images/interaction/cont_img.png'],
+        imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
         commandUserList: [
           {
             name: 'zero',
@@ -138,7 +143,59 @@ Page({
     // });
     this.loadData();//下拉重新加载数据
   },
-
+  operating(e){
+    // console.log(e.currentTarget.dataset.bindex);
+    var index = e.currentTarget.dataset.bindex;
+    if (this.data.commandArraylist[index].showBtn){
+      this.data.commandArraylist[index].showBtn= false;
+    }else{
+      this.data.commandArraylist[index].showBtn = true;
+    }
+    // console.log(this.data.commandArraylist); 
+    this.setData({
+      commandArraylist: this.data.commandArraylist
+    })
+  },
+  //评价
+  discuss(e){
+    var index = e.currentTarget.dataset.bindex;
+    console.log(e)
+    if (this.data.commandArraylist[index].showBtn) {
+      this.data.commandArraylist[index].showBtn = false;
+    } else {
+      this.data.commandArraylist[index].showBtn = true;
+    }
+    this.setData({
+      showInput: true,
+      commandArraylist: this.data.commandArraylist
+    })
+  },
+  //输入
+  bindinput(e){
+    console.log(e.detail.value);
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
+  send(){
+    var inputVal = this.data.inputVal;
+    console.log(inputVal);
+    this.setData({
+      showInput: false
+    })
+  },
+  inputBlur(){
+    console.log(11111)
+    this.setData({
+      showInput: false
+    })
+  },
+  // 去发布
+  toadd(){
+    wx.navigateTo({
+      url: '/pages/pubInteract/pubInteract',
+    })
+  },
   /**
    * 页面上拉触底事件的处理函数
    */

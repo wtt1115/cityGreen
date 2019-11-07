@@ -1,13 +1,11 @@
-// pages/invitation/invitation.js
+// pages/reservationService/reservationService.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    backgroundImg: '../../images/invitationImg/backgroundOne.png',
-    shareImg: '../../images/invitationImg/share.png',
-    qrCodeImg: '../../images/invitationImg/QR_code.png'
+    list: [1, 2, 3]
   },
 
   /**
@@ -16,6 +14,13 @@ Page({
   onLoad: function (options) {
 
   },
+  //更换服务新增
+  toadd(){
+    wx.navigateTo({
+      url: '/pages/serverChange/serverChange',
+    })
+  },
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -29,9 +34,6 @@ Page({
    */
   onShow: function () {
 
-  },
-  butSubmit: function () {
-    console.log(22)
   },
 
   /**
@@ -48,6 +50,12 @@ Page({
 
   },
 
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+
+  },
   loadData: function () {
     setTimeout(function () {
       wx.hideNavigationBarLoading() //完成停止加载
@@ -63,13 +71,6 @@ Page({
     //   //重置数据
     // });
     this.loadData();//下拉重新加载数据
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
   },
 
   /**

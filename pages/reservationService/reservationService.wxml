@@ -1,0 +1,26 @@
+<view class="page">
+    <view class="page__bd">
+    <image class="add_img" bindtap='toadd' src="../../images/add_icon.png"></image>
+    <!-- 预约服务 -->
+    <view class="list" wx:for="{{list}}">
+      <view class="items">
+        预约主题：<text>肥料</text>
+      </view>
+      <view class="items">
+        预约内容：<text>肥料已经用完，请送肥料过来。</text>
+      </view>
+      <view class="items">
+        预约时间：<text>2019-10-21  08:00:00</text>
+      </view>
+      <view class="items">
+        联系人：<text>张三</text>
+      </view>
+      <view class="items">
+        联系电话：<text>13566778899</text>
+      </view>
+      <view class="items">
+        联系地址：<text>长沙市湖南大学</text>
+      </view>
+</view>
+ </view>
+</view>

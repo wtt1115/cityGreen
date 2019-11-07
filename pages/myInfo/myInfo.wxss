@@ -1,0 +1,50 @@
+page .btn {
+  width: 100%;
+  height: 100rpx;
+  background: #fe7b07;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  font-family: SourceHanSansSC-Light;
+  font-size: 36rpx;
+  font-weight: bold;
+  line-height: 100rpx;
+  color: #fff;
+}
+page .headPortrait {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+page .weui-cell__bd {
+  font-size: 30rpx;
+  color: #666666;
+  font-family: SourceHanSansCN-ExtraLight;
+}
+page .gender {
+  display: inline-block;
+  width: 120rpx;
+  height: 56rpx;
+  border: 1rpx solid #e4e4e4;
+  border-radius: 24rpx;
+  margin-left: 20rpx;
+  text-align: center;
+}
+page .gender.active {
+  border: 1rpx solid #00dab7;
+}
+page .gender.active text {
+  color: #00dab7;
+}
+page .gender image {
+  width: 35rpx;
+  height: 35rpx;
+}
+page .gender text {
+  flex: 1;
+}
+page .weui-input,
+page .weui-cell__ft {
+  line-height: 50rpx;
+}

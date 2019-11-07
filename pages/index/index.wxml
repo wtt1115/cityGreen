@@ -11,7 +11,7 @@
   </view>
     <view class="page-body">
       <view class="package-content">
-        <view class="package" wx:for="{{packageData}}" wx:key="">
+        <view class="package" wx:for="{{packageData}}" wx:key="{{index}}">
           <view class="package-l">
             <view class="package-l-t">{{item.text}}</view>
             <view class="package-l-b">{{item.price}}</view>
@@ -34,10 +34,10 @@
     </scroll-view>
     <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
      style="min-height:{{winHeight}}rpx">
-        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}" style="width:auto !important;">
-            <view class='CircleList' wx:for='{{DataSource}}'>
+        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}" wx:key="{{index}}" style="width:auto !important;">
+            <view class='CircleList' wx:for='{{DataSource}}' wx:key="{{index}}">
     <!-- 头像、昵称、内容 -->
-    <view class='body-view' wx:for='{{DataSource}}'>
+    <view class='body-view' wx:for='{{DataSource}}' wx:key="{{index}}">
       <!-- 头像 -->
       <!-- <view class='left-view'>
         <image class='user-icon' src='{{icon}}'></image>
@@ -54,7 +54,8 @@
         </view>
         <!-- 图片 -->
         <view class='photo-view'>
-          <video src="http://ugcydzd.qq.com/uwMROfz2r5xoIaQXGdGnC2dfhzktbhdAyZmeukSI5tNswzV1/g0725sweoz0.m701.mp4?vkey=B28B070EA6C129A9DE74E050CB61AB5FED4BE790ACDB726DAA8BD882906A58EA140E51DA4B57BF05E54CC5226D27CE0E121828DAD344841E6BA1441F88025C4A4BBBC1E0418BEBB1032B95C3DF22CC2D644B48D0BB87C62D64DD09967DAEDBE62AF1B696B3BEB2E7F99F16A2F9344D58" style='width:100%'></video>
+          <video src="" style='width:100%'></video>
+          <!-- http://ugcws.video.gtimg.com/uwMROfz2r5zIIaQXGdGnC2dfhzlvTAnhF6oxQxj00cDugkoy/g0725sweoz0.m701.mp4?vkey=FA0C7F55310681D23AADCC07E3B86F465FA2C8F6D3F4032F7D0F6ACBB837B70E74EFF79FE6B19745C4A01EC4C03523B29D24FE9936C62D2069CB36A269615AB83CCA90F47847CD0032A7FC10D0F22B7D9BE50B00D91B48EE8DCE2B47325BEE387B4101169BFB86DE35A8AA2BA62D6DB3 -->
         </view>
         <!-- 地理位置 -->
         <!-- <view class='user-address-view g-main'>
@@ -77,14 +78,14 @@
 
           <!-- 点赞 -->
           <view class='zan-bg-view'>
-            <view class='zan-user-view' wx:for='{{zanSource}}'>
+            <view class='zan-user-view' wx:for='{{zanSource}}' wx:key="{{index}}">
               <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
             </view>
           </view>
           <view class='line'></view>
           <!-- 评论 -->
           <view class='discuss-view'>
-            <view class='discuss' wx:for='{{contnet}}'>
+            <view class='discuss' wx:for='{{contnet}}' wx:key="{{index}}">
               <label bindtap='TouchZanUser' data-name='{{item.firstname}}' class='discuss-user'>{{item.firstname}}：</label>
               <label class='content'>{{item.content}}</label>
             </view>

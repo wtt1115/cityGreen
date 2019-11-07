@@ -213,9 +213,6 @@ page {
   width: 150rpx;
   /* background: rebeccapurple; */
 }
-.right-view {
-  /* background: red; */
-}
 /* 头像 */
 .headPortrait {
   /* display: flex; */
@@ -289,7 +286,7 @@ page {
 .TDD-view button {
   font-size: 13px;
   margin-left: 20rpx;
-  color: black;
+  color: #c78d1c;
   background: white;
 }
 .TDD-view button::after {

@@ -1,13 +1,11 @@
-// pages/invitation/invitation.js
+// pages/tipService/tipService.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    backgroundImg: '../../images/invitationImg/backgroundOne.png',
-    shareImg: '../../images/invitationImg/share.png',
-    qrCodeImg: '../../images/invitationImg/QR_code.png'
+    list: [1,2,3]
   },
 
   /**
@@ -16,7 +14,12 @@ Page({
   onLoad: function (options) {
 
   },
-
+  loadData: function () {
+    setTimeout(function () {
+      wx.hideNavigationBarLoading() //完成停止加载
+      wx.stopPullDownRefresh() //停止下拉刷新
+    }, 1000)
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -29,9 +32,6 @@ Page({
    */
   onShow: function () {
 
-  },
-  butSubmit: function () {
-    console.log(22)
   },
 
   /**
@@ -46,6 +46,16 @@ Page({
    */
   onUnload: function () {
 
+  },
+  /**
+   * 页面相关事件处理函数--监听用户下拉动作
+   */
+  onPullDownRefresh: function () {
+    wx.showNavigationBarLoading(); //在标题栏中显示加载
+    // this.setData({
+    //   //重置数据
+    // });
+    this.loadData();//下拉重新加载数据
   },
 
   loadData: function () {
@@ -63,13 +73,6 @@ Page({
     //   //重置数据
     // });
     this.loadData();//下拉重新加载数据
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
   },
 
   /**

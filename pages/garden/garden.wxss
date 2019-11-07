@@ -8,49 +8,204 @@ page,
 .page__bd{
     padding-bottom: 0;
 }
-.weui-tab__content{
-    padding-top: 60px;
-    text-align: center;
-}
-.garden_cont{
-  padding:0 40rpx 0 100rpx;
-  
-}
-.interaction_cont_li{
-  position:relative;
-  margin-bottom:100rpx;
-  text-align: left!important;
-  margin-top:20rpx;
-}
-.cont_img{
-  width:33%;
-  height:186rpx;
-  margin-top:6rpx;
-}
-.userImg{
-  width:80rpx;
-  height:80rpx;
-  border-radius: 8rpx;
-  position:absolute;
-  top:-10rpx;
-  left:-85rpx;
-}
-.operation{
-  margin-top:40rpx;
-  position:relative;
-}
-.time{
-  margin-right:100rpx;
-}
-.operating_btn{
-  width:58rpx;
-  height:38rpx;
-  position:absolute;
-  right:10rpx;
+.add_img{
+  width:100rpx;
+  height:100rpx;
+  position:fixed;
   top:50%;
-  margin-top:-20rpx;
+  margin-top:-50rpx;
+  right:20rpx;
+  z-index: 100;
 }
 .weui-navbar{
-  position:fixed!important;
   background: #fff;
+  position:fixed!important;
+}
+/* 社区视频列表 */
+/* 列表 */
+.CircleList {
+  background: white;
+  margin-bottom: 1px;
+  border-bottom: 1px solid whitesmoke;
+  border-top: 1px solid whitesmoke;
+}
+.body-view {
+  display: flex;
+  padding-bottom: 50rpx;
+  border-bottom: 1rpx solid #d7d7d7;
+}
+.left-view {
+  width: 150rpx;
+  /* background: rebeccapurple; */
+}
+/* 头像 */
+.headPortrait {
+  /* display: flex; */
+  width: 84rpx;
+  height: 84rpx;
+  margin-left: 30rpx;
+  margin-top: 10rpx;
+  margin-right: 25rpx;
+  border-radius: 50%;
+}
+/* 昵称 */
+.user-name {
+  display: flex;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 18px;
+  color: #58678a;
+  margin-top: 30rpx;
+  margin-left: 10rpx;
+}
+/* 内容 */
+.user-content {
+  display: flex;
+  flex: 1;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  margin-left: 10rpx;
+  color: #313133;
+}
+/* 图片 */
+.photo-view {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  margin-bottom: 20rpx;
+  width:250rpx;
+  height: 250rpx;
+}
+.photo-view video {
+  width:100%;
+  height:250rpx;
+}
+.photo {
+  background: #ffa600;
+  float: left;
+  margin-right: 10rpx;
+  margin-top: 10rpx;
+}
+/* 地理位置 */
+.user-address-view {
+  display: flex;
+  margin-top: 20rpx;
+}
+.user-address-view label {
+  font-size: 12px;
+  margin: 10rpx;
+}
+/* 时间、删除、点赞评论 */
+.TDD-view {
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  background: white;
+}
+.TDD-view label {
+  font-size: 13px;
+  margin-left: 10rpx;
+}
+.TDD-view button {
+  font-size: 13px;
+  margin-left: 20rpx;
+  color: #c78d1c;
+  background: white;
+}
+.TDD-view button::after {
+  border: white;
+}
+.TDD-view image {
+  width: 58rpx;
+  height: 38rpx;
+}
+.TDD-view image.comments {
+  width: 42rpx;
+  height: 38rpx;
+  margin-right: 80rpx;
+}
+/* 点赞 */
+.zan-view {
+  background: white;
+  margin-bottom: 20rpx;
+}
+.trigon-view {
+  /* height: 20rpx; */
+  margin-bottom: -15rpx;
+}
+.trigon {
+  display: flex;
+  width: 40rpx;
+  height: 20rpx;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.zan-bg-view {
+  display: inline-block;
+  background: #f7f7f9;
+  margin-right: 20rpx;
+  margin-bottom: -11rpx;
+  border-top-left-radius: 7rpx;
+  border-top-right-radius: 7rpx;
+  position: relative;
+}
+.zan-bg-view::before {
+  display: block;
+  position: absolute;
+  top: -40rpx;
+  left: 24rpx;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 20rpx solid;
+  border-color: transparent transparent #f7f7f9;
+}
+.zan-user-view {
+  display: flex;
+  float: left;
+  height: 40rpx;
+  margin-left: 10rpx;
+  /* margin-top: 5rpx; */
+  align-content: center;
+}
+.zan-user {
+  font-size: 12px;
+  line-height: 40rpx;
+  height: 40rpx;
+  color: #58678a;
+}
+.line {
+  width: 97%;
+  height: 1px;
+  background: white;
+}
+/* 评论 */
+.discuss-view {
+  background: white;
+  width: 97%;
+}
+.discuss {
+  background: #f7f7f9;
+  line-height: 35rpx;
+}
+.discuss label {
+  font-size: 12px;
+}
+.discuss-user {
+  color: #58678a;
+  margin-left: 10rpx;
+}
+.content {
+  margin-left: 10rpx;
+}
+/* 弹出框 */
+.pop-up-box {
+  position: absolute;
+  height: 60rpx;
+  border-radius: 10rpx;
+  right: 90rpx;
+  background: rgba(0, 0, 0, 0.7);
+}
+.g-main {
+  margin-left: 30rpx;
+  margin-right: 30rpx;
 }

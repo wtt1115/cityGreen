@@ -1,0 +1,36 @@
+/* pages/replaceService/replaceService.wxss */
+.page__bd{
+  padding:20rpx 0;
+}
+.add_img{
+  width:100rpx;
+  height:100rpx;
+  position:fixed;
+  top:50%;
+  margin-top:-50rpx;
+  right:20rpx;
+  z-index: 100;
+}
+.items {
+  border-bottom: 1rpx solid #e4e4ee;
+  padding-left: 28rpx;
+}
+.items:last-child {
+  border-bottom: 0 none;
+}
+.items text {
+  color: #313133;
+}
+.list {
+  line-height: 80rpx;
+  font-family: SourceHanSansSC-Light;
+  font-size: 24rpx;
+  font-weight: bold;
+  font-stretch: normal;
+  color: #666666;
+  background: #fff;
+  margin-bottom: 20rpx;
+}
+page {
+  background: #e6e8e7;
+}

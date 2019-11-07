@@ -32,12 +32,11 @@
         <view class="tab-item {{currentTab==6?'active':''}}" data-current="6" bindtap="swichNav">全部</view>
         <view class="tab-item {{currentTab==7?'active':''}}" data-current="7" bindtap="swichNav">其他</view>
     </scroll-view>
-    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab"
-     style="min-height:{{winHeight}}rpx">
-        <swiper-item wx:for="{{[0,1,2,3,4,5,6,7]}}" wx:key="{{index}}" style="width:auto !important;">
+    <swiper style="height:{{height}}px;min-height:auto;" class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab">
+        <swiper-item class="item-list" wx:for="{{[0,1,2,3,4,5,6,7]}}" wx:key="{{index}}" style="width:auto !important;">
             <view class='CircleList' wx:for='{{DataSource}}' wx:key="{{index}}">
     <!-- 头像、昵称、内容 -->
-    <view class='body-view' wx:for='{{DataSource}}' wx:key="{{index}}">
+    <view class='body-view' >
       <!-- 头像 -->
       <!-- <view class='left-view'>
         <image class='user-icon' src='{{icon}}'></image>
@@ -66,7 +65,7 @@
         <view class='TDD-view g-main'>
           <label>2018-07-25 10:14:23</label>
           <button bindtap='delete'>删除</button>
-          <image class="comments" src='../../images/myImg/comments.png'></image>
+          <image bindtap='discuss'  data-bindex='{{bindex}}' class="comments" src='../../images/myImg/comments.png'></image>
           <image data-isShow='{{isShow}}' bindtap='TouchDiscuss' src='../../images/myImg/zhuanfa.png'></image>
         </view>
 
@@ -77,11 +76,11 @@
           </view> -->
 
           <!-- 点赞 -->
-          <view class='zan-bg-view'>
+          <!-- <view class='zan-bg-view'>
             <view class='zan-user-view' wx:for='{{zanSource}}' wx:key="{{index}}">
               <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
             </view>
-          </view>
+          </view> -->
           <view class='line'></view>
           <!-- 评论 -->
           <view class='discuss-view'>
@@ -97,5 +96,8 @@
   </view>
         </swiper-item>
     </swiper>
-
+  <view class="input_box hidenIuput  {{ showInput ? 'showInput':''}}">
+      <input bindinput="bindinput" type='text' class="inputs" focus='{{showInput}}'  bindblur="inputBlur" placeholder="请输入评价内容" />
+      <text class="send_btn" bindinput="send" >发送</text>
+    </view>
 </view>

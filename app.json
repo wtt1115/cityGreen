@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/index/index",
     "pages/my/my",
     "pages/garden/garden",
     "pages/replaceService/replaceService",
@@ -18,7 +19,6 @@
     "pages/reservationService/reservationService",
     "pages/tipService/tipService",
     "pages/myInfo/myInfo",
-    "pages/index/index",
     "pages/default/default",
     "pages/join/join",
     "pages/register/register",

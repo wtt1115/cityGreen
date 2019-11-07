@@ -1,4 +1,5 @@
 var app = getApp();
+
 var that
 Page({
   onShareAppMessage() {
@@ -9,6 +10,9 @@ Page({
   },
 
   data: {
+    showInput: false,
+    swiper_length: 0,
+    height: 300,
     //轮播图
     imgUrls: [
       '../../images/banner_icon.png',
@@ -139,6 +143,16 @@ Page({
         });
       }
     });
+    //获取节点信息
+    setTimeout(()=>{
+      that.get_wxml(`.item-list`, (rects) => {
+        that.setData({
+          height: rects[that.data.currentTab].height
+        })
+        console.log(rects[0].height);
+        console.log(this.data.currentTab);
+      })
+    },100)
   },
   loadData: function () {
     setTimeout(function () {
@@ -239,5 +253,47 @@ Page({
     //   //重置数据
     // });
     this.loadData();//下拉重新加载数据
+  },
+
+  //获取节点
+  get_wxml: function (className, callback) {
+    wx.createSelectorQuery().selectAll(className).boundingClientRect(callback).exec()
+  },
+  onReady: function () {
+    //获取节点信息
+    that.get_wxml(`.item-list`, (rects) => {
+      that.setData({
+        height: rects[that.data.currentTab].height
+      })
+      console.log(rects[0].height);
+      console.log(this.data.currentTab);
+    })
+  },
+  //评价
+  discuss(e) {
+    var index = e.currentTarget.dataset.bindex;
+    this.setData({
+      showInput: true
+    })
+  },
+  //输入
+  bindinput(e) {
+    console.log(e.detail.value);
+    this.setData({
+      inputVal: e.detail.value
+    });
+  },
+  send() {
+    var inputVal = this.data.inputVal;
+    console.log(inputVal);
+    this.setData({
+      showInput: false
+    })
+  },
+  inputBlur() {
+    console.log(11111)
+    this.setData({
+      showInput: false
+    })
   }
 })

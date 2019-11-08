@@ -14,21 +14,49 @@
             <view class="weui-tab__panel garden_cont">
                 <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
                      <view class='CircleList'>
-                          <view class='body-view' wx:for='{{DataSource}}' wx:key="{{index}}">
+                          <view class='body-view' wx:for='{{dataList}}' wx:key="{{index}}" wx:for-index="bindex">
                             <view class='right-view'>
-                            <view class="igs-flex" style="margin-top:40rpx;">
+                            <view style="display:flex;">
                             <view class='photo-view'>
                                 <video src="" style='width:100%'></video>
-                                <!-- http://ugcws.video.gtimg.com/uwMROfz2r5zIIaQXGdGnC2dfhzlvTAnhF6oxQxj00cDugkoy/g0725sweoz0.m701.mp4?vkey=FA0C7F55310681D23AADCC07E3B86F465FA2C8F6D3F4032F7D0F6ACBB837B70E74EFF79FE6B19745C4A01EC4C03523B29D24FE9936C62D2069CB36A269615AB83CCA90F47847CD0032A7FC10D0F22B7D9BE50B00D91B48EE8DCE2B47325BEE387B4101169BFB86DE35A8AA2BA62D6DB3 -->
                               </view>
-
-                                <view class='user-content'>{{content}}</view>
+                              
+                              <view class='user-content'>
+                                <view>
+                                  <text class="status_text" wx:if="{{item.status == '1'}}">成交</text>
+                                  <text class="status_text_no" wx:if="{{item.status == '0'}}">未成交</text>
+                                  <text>{{item.title}}</text>
+                                </view>
+                                <view>
+                                  <text>上传者：{{item.uploader}}</text>
+                                
+                                </view>
+                                <view>
+                                  <text>发布时间：{{item.time}}</text>
+                                </view>
+                                 <view>
+                                  <text>联系电话：{{item.phone}}</text>
+                                </view>
+                                <view>
+                                   <text>地址：{{item.address}}</text>
+                                </view>
+                               
+                               </view>
                             </view>
+                            <view class="jianjie">简介：{{item.content}}</view>
                               <!-- 时间、删除按钮、点赞评论按钮 -->
                               <view class='TDD-view g-main'>
-                                <label>2018-07-25 10:14:23</label>
                                 <button bindtap='delete'>删除</button>
-                                <image data-isShow='{{isShow}}' bindtap='TouchDiscuss' src='../../images/operating_btn_icon.png'></image>
+                                <image data-isShow='{{isShow}}' bindtap='operating'  data-bindex='{{bindex}}'src='../../images/operating_btn_icon.png'></image>
+                                  <view class="btn_box igs-flex"  wx:if="{{item.showBtn}}">
+                                    <view bindtap="like" class="like_btn">
+                                        <text>点赞</text>
+                                        <!-- <text>取消</text> -->
+                                    </view>
+                                    <view class="discuss_btn" bindtap='discuss'  data-bindex='{{bindex}}' >
+                                        <text>评价</text>
+                                    </view>
+                                  </view>
                               </view>
 
                               <!-- 点赞 -->
@@ -39,14 +67,14 @@
 
                                 <!-- 点赞 -->
                                 <view class='zan-bg-view'>
-                                  <view class='zan-user-view' wx:for='{{zanSource}}' wx:key="{{index}}">
+                                  <view class='zan-user-view' wx:for='{{item.zanSource}}' wx:key="{{index}}">
                                     <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
                                   </view>
                                 </view>
                                 <view class='line'></view>
                                 <!-- 评论 -->
                                 <view class='discuss-view'>
-                                  <view class='discuss' wx:for='{{contnet}}' wx:key="{{index}}">
+                                  <view class='discuss' wx:for='{{item.contnet}}' wx:key="{{index}}">
                                     <label bindtap='TouchZanUser' data-name='{{item.firstname}}' class='discuss-user'>{{item.firstname}}：</label>
                                     <label class='content'>{{item.content}}</label>
                                   </view>
@@ -61,5 +89,10 @@
                 <view class="weui-tab__content" hidden="{{activeIndex != 2}}">选项三的内容</view>
             </view>
         </view>
+         <view class="igs-flex input_box hidenIuput  {{ showInput ? 'showInput':''}}" style="top:{{top}}">
+          <input bindinput="bindinput"  type='text' class="inputs" focus='{{showInput}}'  bindblur="inputBlur" placeholder="请输入评价内容" />
+          <view bindtap='like' class="send_btn {{sendcolor?'sendcolor':''}}" bindinput="send" >发送</view>
+        </view>
     </view>
+    
 </view>

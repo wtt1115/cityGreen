@@ -12,7 +12,7 @@ page,
   width:100rpx;
   height:100rpx;
   position:fixed;
-  top:50%;
+  top:40%;
   margin-top:-50rpx;
   right:20rpx;
   z-index: 100;
@@ -31,7 +31,7 @@ page,
 }
 .body-view {
   display: flex;
-  padding-bottom: 50rpx;
+  padding: 40rpx;
   border-bottom: 1rpx solid #d7d7d7;
 }
 .left-view {
@@ -60,18 +60,33 @@ page,
 }
 /* 内容 */
 .user-content {
-  display: flex;
-  flex: 1;
-  font-size: 32rpx;
+  font-size: 24rpx;
   line-height: 50rpx;
-  margin-left: 10rpx;
+  margin-left: 20rpx;
   color: #313133;
+  width:60%;
+}
+.jianjie{
+  font-size: 24rpx;
+  color: #313133;
+  margin-top:20rpx;
+}
+.status_text{
+  background: rgb(0,180,218);
+  padding:5rpx 10rpx;
+  color:#fff;
+  border-radius: 10rpx;
+  margin-right:20rpx;
+}
+.status_text_no{
+  background: rgb(199,32,28);
+  padding:5rpx 10rpx;
+  color:#fff;
+  border-radius: 10rpx;
+  margin-right:20rpx;
 }
 /* 图片 */
 .photo-view {
-  margin-left: 30rpx;
-  margin-right: 30rpx;
-  margin-bottom: 20rpx;
   width:250rpx;
   height: 250rpx;
 }
@@ -96,10 +111,11 @@ page,
 }
 /* 时间、删除、点赞评论 */
 .TDD-view {
-  height: 60rpx;
+  height: 120rpx;
   display: flex;
   align-items: center;
   background: white;
+  position:relative;
 }
 .TDD-view label {
   font-size: 13px;
@@ -107,7 +123,7 @@ page,
 }
 .TDD-view button {
   font-size: 13px;
-  margin-left: 20rpx;
+  margin-left: 430rpx;
   color: #c78d1c;
   background: white;
 }
@@ -208,4 +224,64 @@ page,
 .g-main {
   margin-left: 30rpx;
   margin-right: 30rpx;
+}
+
+/**************** 点赞评论按钮*****************/
+.btn_box{
+  background: #4d5154;
+  width:400rpx;
+  height:80rpx;
+  position:absolute;
+  top:50%;
+  margin-top:-40rpx;
+  right:80rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+  padding:20rpx 0;
+}
+.discuss_btn,.like_btn{
+  width:50%;
+  height:100%;
+  color:#fff;
+  line-height:40rpx;
+  text-align: center; 
+}
+.like_btn{
+  border-right:1px solid #ddd;
+}
+.input_box{
+  width:100%;
+  border:1px solid #ddd;
+  background: #fff;
+  padding:20rpx 10px;
+}
+.send_btn{
+  width:100rpx;
+  height:50rpx;
+  line-height:50rpx;
+  border:1px solid rgb(0,218,183);
+  color:rgb(0,218,183);
+  border-radius: 25rpx;
+  text-align: center;
+  margin-top:30rpx;
+}
+.inputs{
+  flex:1;
+  padding:0 10rpx;
+  margin:30rpx 0;
+}
+.hidenIuput{
+  position: absolute;
+  left:0;
+  z-index:-100;
+  top:-200px;
+}
+.showInput{
+  position:fixed;
+  z-index:100;
+   /* top:240px;-20 */
+}
+.sendcolor{
+  background: rgb(0,218,183);
+  color:#fff;
 }

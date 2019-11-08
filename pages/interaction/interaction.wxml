@@ -17,7 +17,7 @@
           <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text>
           <image class="operating_btn" bindtap='operating'  data-bindex='{{bindex}}'  src="../../images/operating_btn_icon.png"></image>
           <view class="btn_box igs-flex" wx:if="{{item.showBtn}}">
-            <view class="like_btn">
+            <view bindtap="like" class="like_btn">
                 <text>点赞</text>
                 <!-- <text>取消</text> -->
             </view>

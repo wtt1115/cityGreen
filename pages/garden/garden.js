@@ -100,8 +100,18 @@ Page({
     })
   },
   //点赞+1
-  like() {
+  like(e) {
     console.log('点赞+1');
+    var index = e.currentTarget.dataset.bindex;
+    if (this.data.dataList[index].showBtn) {
+      this.data.dataList[index].showBtn = false;
+    } else {
+      this.data.dataList[index].showBtn = true;
+    }
+    this.setData({
+      showInput: true,
+      dataList: this.data.dataList
+    })
   },
   //评价
   discuss(e) {

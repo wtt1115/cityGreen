@@ -49,7 +49,7 @@
                                 <button bindtap='delete'>删除</button>
                                 <image data-isShow='{{isShow}}' bindtap='operating'  data-bindex='{{bindex}}'src='../../images/operating_btn_icon.png'></image>
                                   <view class="btn_box igs-flex"  wx:if="{{item.showBtn}}">
-                                    <view bindtap="like" class="like_btn">
+                                    <view bindtap="like" class="like_btn" data-bindex='{{bindex}}'>
                                         <text>点赞</text>
                                         <!-- <text>取消</text> -->
                                     </view>

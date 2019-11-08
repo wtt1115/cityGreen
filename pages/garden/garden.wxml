@@ -66,10 +66,9 @@
                                 </view> -->
 
                                 <!-- 点赞 -->
-                                <view class='zan-bg-view'>
-                                  <view class='zan-user-view' wx:for='{{item.zanSource}}' wx:key="{{index}}">
-                                    <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
-                                  </view>
+                               <view class='zan-bg-view'>
+                                <image class="zan_icon" src="../../images/zan_icon.png"></image>
+                                <label bindtap='TouchZanUser' wx:for='{{item.zanSource}}' wx:key="{{index}}" data-name='{{item}}' class='zan-user'>{{item}},</label>
                                 </view>
                                 <view class='line'></view>
                                 <!-- 评论 -->

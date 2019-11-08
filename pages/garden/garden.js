@@ -109,7 +109,6 @@ Page({
       this.data.dataList[index].showBtn = true;
     }
     this.setData({
-      showInput: true,
       dataList: this.data.dataList
     })
   },

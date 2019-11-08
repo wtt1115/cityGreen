@@ -17,7 +17,7 @@
           <text class="time ftColor49 fz24">{{item.time}}</text><text class="delete ftColorc78d1c fz24">删除</text>
           <image class="operating_btn" bindtap='operating'  data-bindex='{{bindex}}'  src="../../images/operating_btn_icon.png"></image>
           <view class="btn_box igs-flex" wx:if="{{item.showBtn}}">
-            <view bindtap="like" class="like_btn">
+            <view bindtap="like" class="like_btn" data-bindex='{{bindex}}'>
                 <text>点赞</text>
                 <!-- <text>取消</text> -->
             </view>
@@ -26,6 +26,23 @@
             </view>
           </view>
         </view>
+         <!-- 点赞 -->
+          <view class='zan-view g-main'>
+          
+            <!-- 点赞 -->
+            <view class='zan-bg-view'>
+                <image class="zan_icon" src="../../images/zan_icon.png"></image>
+                <label bindtap='TouchZanUser' wx:for='{{item.zanSource}}' wx:key="{{index}}" data-name='{{item}}' class='zan-user'>{{item}},</label>
+            </view>
+            <view class='line'></view>
+            <!-- 评论 -->
+            <view class='discuss-view'>
+              <view class='discuss' wx:for='{{item.contnet}}' wx:key="{{index}}">
+                <label bindtap='TouchZanUser' data-name='{{item.firstname}}' class='discuss-user'>{{item.firstname}}：</label>
+                <label class='content'>{{item.content}}</label>
+              </view>
+            </view>
+          </view>
       </view>
     </block>
     <view class="igs-flex input_box hidenIuput  {{ showInput ? 'showInput':''}}" style="top:{{top}}">

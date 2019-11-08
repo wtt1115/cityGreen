@@ -141,11 +141,10 @@ page,
 }
 /* 点赞 */
 .zan-view {
-  background: white;
-  margin-bottom: 20rpx;
+  background: #f7f7f9;
+  margin-top: 40rpx;
 }
 .trigon-view {
-  /* height: 20rpx; */
   margin-bottom: -15rpx;
 }
 .trigon {
@@ -156,10 +155,7 @@ page,
   margin-left: 10rpx;
 }
 .zan-bg-view {
-  display: inline-block;
-  background: #f7f7f9;
-  margin-right: 20rpx;
-  margin-bottom: -11rpx;
+  padding:20rpx;
   border-top-left-radius: 7rpx;
   border-top-right-radius: 7rpx;
   position: relative;
@@ -184,24 +180,24 @@ page,
   align-content: center;
 }
 .zan-user {
+   margin-right:10rpx;
   font-size: 12px;
   line-height: 40rpx;
   height: 40rpx;
   color: #58678a;
 }
 .line {
-  width: 97%;
+  width: 100%;
   height: 1px;
   background: white;
 }
-/* 评论 */
 .discuss-view {
-  background: white;
-  width: 97%;
+  width:100%;
+  padding:20rpx;
 }
 .discuss {
   background: #f7f7f9;
-  line-height: 35rpx;
+  line-height: 50rpx;
 }
 .discuss label {
   font-size: 12px;
@@ -212,6 +208,12 @@ page,
 }
 .content {
   margin-left: 10rpx;
+}
+
+.zan_icon{
+  width:24rpx;
+  height:21rpx;
+  margin-right:10rpx;
 }
 /* 弹出框 */
 .pop-up-box {

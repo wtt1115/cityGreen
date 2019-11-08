@@ -18,24 +18,17 @@ Page({
         praiseFlag: false,
         lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
         imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
-        commandUserList: [
-          {
-            name: 'zero',
-            text: '厉害'
-          },
-          {
-            name: '华仔',
-            text: '不错'
-          },
-          {
-            name: '方知',
-            text: 'hello'
-          },
-          {
-            name: '吴氏生飞 地产老猫',
-            text: '好产品'
-          },
-        ]
+        zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
+        contnet: [{
+          'firstname': '张三',
+          'content': '你好漂亮呀！！'
+        },
+        {
+          'firstname': '李四',
+          'content': '纳尼！！'
+        },
+
+        ],
       },
       {
         showBtn: false,
@@ -45,24 +38,17 @@ Page({
         praiseFlag: false,
         lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
         imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
-        commandUserList: [
-          {
-            name: 'zero',
-            text: '厉害'
-          },
-          {
-            name: '华仔',
-            text: '不错'
-          },
-          {
-            name: '方知',
-            text: 'hello'
-          },
-          {
-            name: '吴氏生飞 地产老猫',
-            text: '好产品'
-          },
-        ]
+        zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
+        contnet: [{
+          'firstname': '张三',
+          'content': '你好漂亮呀！！'
+        },
+        {
+          'firstname': '李四',
+          'content': '纳尼！！'
+        },
+
+        ],
       },
        {
         showBtn: false,
@@ -72,24 +58,17 @@ Page({
         praiseFlag: false,
         lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
         imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
-        commandUserList: [
-          {
-            name: 'zero',
-            text: '厉害'
-          },
-          {
-            name: '华仔',
-            text: '不错'
-          },
-          {
-            name: '方知',
-            text: 'hello'
-          },
-          {
-            name: '吴氏生飞 地产老猫',
-            text: '好产品'
-          },
-        ]
+         zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
+         contnet: [{
+           'firstname': '张三',
+           'content': '你好漂亮呀！！'
+         },
+         {
+           'firstname': '李四',
+           'content': '纳尼！！'
+         },
+
+         ],
       }
     ]
   },
@@ -159,8 +138,17 @@ Page({
     })
   },
   //点赞+1
-  like(){
+  like(e) {
     console.log('点赞+1');
+    var index = e.currentTarget.dataset.bindex;
+    if (this.data.commandArraylist[index].showBtn) {
+      this.data.commandArraylist[index].showBtn = false;
+    } else {
+      this.data.commandArraylist[index].showBtn = true;
+    }
+    this.setData({
+      commandArraylist: this.data.commandArraylist
+    })
   },
   //评价
   discuss(e){

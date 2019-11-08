@@ -308,6 +308,7 @@ page {
 .zan-view {
   background: white;
   margin-bottom: 20rpx;
+  position: relative;
 }
 .trigon-view {
   /* height: 20rpx; */
@@ -328,17 +329,6 @@ page {
   border-top-left-radius: 7rpx;
   border-top-right-radius: 7rpx;
   position: relative;
-}
-.zan-bg-view::before {
-  display: block;
-  position: absolute;
-  top: -40rpx;
-  left: 24rpx;
-  content: '';
-  width: 0;
-  height: 0;
-  border: 20rpx solid;
-  border-color: transparent transparent #f7f7f9;
 }
 .zan-user-view {
   display: flex;
@@ -361,12 +351,23 @@ page {
 }
 /* 评论 */
 .discuss-view {
-  background: white;
-  width: 97%;
+  width: 100%;
+  padding: 20rpx;
+}
+.discuss-view::before {
+  display: block;
+  position: absolute;
+  top: -18rpx;
+  left: 40rpx;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 20rpx solid;
+  border-color: transparent transparent #f7f7f9;
 }
 .discuss {
   background: #f7f7f9;
-  line-height: 35rpx;
+  line-height: 50rpx;
 }
 .discuss label {
   font-size: 12px;
@@ -390,39 +391,36 @@ page {
   margin-left: 30rpx;
   margin-right: 30rpx;
 }
-.input_box{
-  width:100%;
-  border:1px solid #ddd;
+.input_box {
+  width: 100%;
+  border: 1px solid #ddd;
   background: #fff;
-  padding:20rpx 10px;
+  padding: 20rpx 10px;
 }
-.send_btn{
-  width:100rpx;
-  height:50rpx;
-  line-height:50rpx;
-  border:1px solid rgb(0,218,183);
-  color:rgb(0,218,183);
-  border-radius: 25rpx;
-  text-align: center;
-  margin-top:30rpx;
+.send_btn {
+  float: right;
+  padding: 10rpx 40rpx;
+  border: 1px solid #ddd;
+  color: #ddd;
+  border-radius: 30rpx;
 }
-.inputs{
-  flex:1;
-  padding:0 10rpx;
-  margin:30rpx 0;
+.inputs {
+  width: 100%;
+  padding: 20rpx;
 }
-.hidenIuput{
-  position: absolute;
-  left:0;
-  z-index:-100;
-  top:-200px;
+.hidenIuput {
+  position: fixed;
+  left: 0;
+  z-index: -100;
+  top: -200px;
 }
-.showInput{
-  position:fixed;
-  z-index:100;
-   /* top:240px;-20 */
+.showInput {
+  position: fixed;
+  z-index: 100;
+  top: 35%;
 }
-.sendcolor{
-  background: rgb(0,218,183);
-  color:#fff;
+.listTime {
+  margin-right: 100rpx;
+  font-size: 24rpx;
+  color: #494949;
 }

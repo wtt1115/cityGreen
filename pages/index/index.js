@@ -145,7 +145,7 @@ Page({
       }
     });
     //获取节点信息
-    setTimeout(()=>{
+    setTimeout(() => {
       that.get_wxml(`.item-list`, (rects) => {
         that.setData({
           height: rects[that.data.currentTab].height
@@ -153,7 +153,7 @@ Page({
         console.log(rects[0].height);
         console.log(this.data.currentTab);
       })
-    },100)
+    }, 100)
   },
   loadData: function () {
     setTimeout(function () {

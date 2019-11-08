@@ -263,6 +263,7 @@ overflow-x: hidden;
   // width: 100%;
   background: white;
   margin-bottom: 20rpx;
+  position: relative;
 }
 .trigon-view{
   /* height: 20rpx; */
@@ -284,17 +285,6 @@ overflow-x: hidden;
   border-top-left-radius: 7rpx;
   border-top-right-radius: 7rpx;
   position: relative;
-  &::before{
-    display: block;
-    position: absolute;
-    top: -40rpx;
-    left: 24rpx;
-    content: '';
-    width: 0;
-    height: 0;
-    border: 20rpx solid;
-    border-color: transparent transparent #f7f7f9;
-  }
 }
 .zan-user-view{
   display: flex;
@@ -319,13 +309,24 @@ overflow-x: hidden;
 
 /* 评论 */
 .discuss-view{
-  background: white;
-  width: 97%;
+  width: 100%;
+  padding: 20rpx;
+  &::before{
+    display: block;
+    position: absolute;
+    top: -18rpx;
+    left: 40rpx;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 20rpx solid;
+    border-color: transparent transparent #f7f7f9;
+  }
 }
 
 .discuss{
   background: #f7f7f9;
-  line-height: 35rpx;
+  line-height: 50rpx;
 }
 
 .discuss label{
@@ -333,7 +334,7 @@ overflow-x: hidden;
 }
 
 .discuss-user{
-  color: rgb(88, 103, 138);
+  color: #58678a;
   margin-left: 10rpx;
 }
 
@@ -382,4 +383,9 @@ overflow-x: hidden;
   position:fixed;
   z-index:100;
   top:35%;
+}
+.listTime{
+  margin-right: 100rpx;
+  font-size: 24rpx;
+  color: #494949;
 }

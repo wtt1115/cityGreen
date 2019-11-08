@@ -390,31 +390,39 @@ page {
   margin-left: 30rpx;
   margin-right: 30rpx;
 }
-.input_box {
-  width: 100%;
-  border: 1px solid #ddd;
+.input_box{
+  width:100%;
+  border:1px solid #ddd;
   background: #fff;
-  padding: 20rpx 10px;
+  padding:20rpx 10px;
 }
-.send_btn {
-  float: right;
-  padding: 10rpx 40rpx;
-  border: 1px solid #ddd;
-  color: #ddd;
-  border-radius: 30rpx;
+.send_btn{
+  width:100rpx;
+  height:50rpx;
+  line-height:50rpx;
+  border:1px solid rgb(0,218,183);
+  color:rgb(0,218,183);
+  border-radius: 25rpx;
+  text-align: center;
+  margin-top:30rpx;
 }
-.inputs {
-  width: 100%;
-  padding: 20rpx;
+.inputs{
+  flex:1;
+  padding:0 10rpx;
+  margin:30rpx 0;
 }
-.hidenIuput {
-  position: fixed;
-  left: 0;
-  z-index: -100;
-  top: -200px;
+.hidenIuput{
+  position: absolute;
+  left:0;
+  z-index:-100;
+  top:-200px;
 }
-.showInput {
-  position: fixed;
-  z-index: 100;
-  top: 35%;
+.showInput{
+  position:fixed;
+  z-index:100;
+   /* top:240px;-20 */
+}
+.sendcolor{
+  background: rgb(0,218,183);
+  color:#fff;
 }

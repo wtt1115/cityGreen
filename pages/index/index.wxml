@@ -96,8 +96,8 @@
   </view>
         </swiper-item>
     </swiper>
-  <view class="input_box hidenIuput  {{ showInput ? 'showInput':''}}">
-      <input bindinput="bindinput" type='text' class="inputs" focus='{{showInput}}'  bindblur="inputBlur" placeholder="请输入评价内容" />
-      <text class="send_btn" bindinput="send" >发送</text>
+    <view class="igs-flex input_box hidenIuput  {{ showInput ? 'showInput':''}}" style="top:{{top}}">
+      <input bindinput="bindinput"  type='text' class="inputs" focus='{{showInput}}'  bindblur="inputBlur" placeholder="请输入评价内容" />
+      <view bindtap='like' class="send_btn {{sendcolor?'sendcolor':''}}" bindinput="send" >发送</view>
     </view>
 </view>

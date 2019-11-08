@@ -10,6 +10,7 @@ Page({
   },
 
   data: {
+    top: '',
     showInput: false,
     swiper_length: 0,
     height: 300,
@@ -271,17 +272,25 @@ Page({
   },
   //评价
   discuss(e) {
-    var index = e.currentTarget.dataset.bindex;
+    var top = e.detail.x;//获取键盘高度定位
+    console.log(top)
     this.setData({
-      showInput: true
+      showInput: true,
+      top: top + 'px',
     })
   },
   //输入
   bindinput(e) {
-    console.log(e.detail.value);
-    this.setData({
-      inputVal: e.detail.value
-    });
+    if (e.detail.value.length > 0) {
+      this.setData({
+        inputVal: e.detail.value,
+        sendcolor: true
+      });
+    } else {
+      this.setData({
+        sendcolor: false
+      });
+    }
   },
   send() {
     var inputVal = this.data.inputVal;

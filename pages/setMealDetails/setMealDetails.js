@@ -43,7 +43,7 @@ Page({
         images: '../../images/banner_icon.png',
         title: '自己阳台种的青菜2',
         describe: '有的青菜大概30斤左右，可以菜品互换，也可以零售（100/斤），仅限附近3公里交换，有需要的朋友请联系我，谢谢！',
-        chooseStatus: 'true'
+        chooseStatus: 'false'
       },
       {
         id: 3,

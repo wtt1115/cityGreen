@@ -57,25 +57,62 @@ Page({
       listen: 2234
     }],
     //社区列表
-    DataSource: [1, 1, 1, 1, 1],
-    icon: 'https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3175633703,3855171020&fm=27&gp=0.jpg',
-    content: '一分钟了解阳台种菜一分钟了解阳台种菜，一分钟了解阳台种菜',
-    resource: ['http://img2.imgtn.bdimg.com/it/u=2118739199,3378602431&fm=27&gp=0.jpg',
-      'http://img0.imgtn.bdimg.com/it/u=2277942808,1417432970&fm=27&gp=0.jpg',
-      'http://img5.imgtn.bdimg.com/it/u=1504812505,3480403568&fm=27&gp=0.jpg',
-      'http://img4.imgtn.bdimg.com/it/u=3456219059,4251129897&fm=27&gp=0.jpg',
-      'http://img3.imgtn.bdimg.com/it/u=3912316188,1981132393&fm=27&gp=0.jpg'
-    ],
-    zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
-    contnet: [{
-      'firstname': '张三',
-      'content': '你好漂亮呀！！'
-    },
-    {
-      'firstname': '李四',
-      'content': '纳尼！！'
-    }
-    ],
+    DataSource: [
+        {
+          showBtn: false,
+          userUrl: '../../images/myImg/userImg.jpg',
+        title: '一分钟了解阳台种菜一分钟了解阳台种菜一分钟了解阳台种菜一分钟了解阳台种菜',
+          imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
+          zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
+          contnet: [{
+            'firstname': '张三',
+            'content': '你好漂亮呀！！'
+          },
+          {
+            'firstname': '李四',
+            'content': '纳尼！！'
+          },
+
+          ],
+        },
+        {
+          showBtn: false,
+          userUrl: '../../images/myImg/userImg.jpg',
+          title: '一分钟了解阳台种菜一分钟了解阳台种菜一分钟了解阳台种菜一分钟了解阳台种菜',
+          imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
+          zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
+          contnet: [{
+            'firstname': '张三',
+            'content': '你好漂亮呀！！'
+          },
+          {
+            'firstname': '李四',
+            'content': '纳尼！！'
+          },
+
+          ],
+        },
+        {
+          showBtn: false,
+          userUrl: '../../images/myImg/userImg.jpg',
+          username: 'A善手教育咨询胡老师',
+          time: '7分钟前',
+          praiseFlag: false,
+          lovePointUser: '稻草人,玩笑而,加推你好啊,万众杀戮空间,是街坊邻居',
+          imgUrlLst: ['../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png', '../../images/banner_icon.png'],
+          zanSource: ['张三', '李四', '王五', '找钱', '孙俪', '王宝'],
+          contnet: [{
+            'firstname': '张三',
+            'content': '你好漂亮呀！！'
+          },
+          {
+            'firstname': '李四',
+            'content': '纳尼！！'
+          },
+
+          ],
+        }
+      ],
     photoWidth: wx.getSystemInfoSync().windowWidth / 5,
 
     popTop: 0, //弹出点赞评论框的位置
@@ -145,7 +182,7 @@ Page({
       }
     });
     //获取节点信息
-    setTimeout(() => {
+    setTimeout(()=>{
       that.get_wxml(`.item-list`, (rects) => {
         that.setData({
           height: rects[that.data.currentTab].height
@@ -153,7 +190,7 @@ Page({
         console.log(rects[0].height);
         console.log(this.data.currentTab);
       })
-    }, 100)
+    },100)
   },
   loadData: function () {
     setTimeout(function () {

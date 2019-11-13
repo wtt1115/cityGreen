@@ -34,22 +34,13 @@
     </scroll-view>
     <swiper style="height:{{height}}px;min-height:auto;" class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab">
         <swiper-item class="item-list" wx:for="{{[0,1,2,3,4,5,6,7]}}" wx:key="{{index}}" style="width:auto !important;">
-            <view class='CircleList' wx:for='{{DataSource}}' wx:key="{{index}}">
+  <view class='CircleList' wx:for='{{DataSource}}' wx:key="{{index}}">
     <!-- 头像、昵称、内容 -->
     <view class='body-view' >
-      <!-- 头像 -->
-      <!-- <view class='left-view'>
-        <image class='user-icon' src='{{icon}}'></image>
-      </view> -->
       <view class='right-view'>
-        <!-- 昵称 -->
-        <!-- <view class='user-name-view'>
-          <label class='user-name'>宣志强</label>
-        </view> -->
-        <!-- 内容 -->
         <view class='user-content-view'>
           <image class="headPortrait" src='../../images/myImg/userImg.jpg'></image>
-          <text class='user-content'>{{content}}</text>
+          <text class='user-content'>{{item.title}}</text>
         </view>
         <!-- 图片 -->
         <view class='photo-view'>
@@ -63,36 +54,31 @@
 
         <!-- 时间、删除按钮、点赞评论按钮 -->
         <view class='TDD-view g-main'>
-          <label class="listTime">10分钟前</label>
-          <button bindtap='delete'>删除</button>
-          <image bindtap='discuss'  data-bindex='{{bindex}}' class="comments" src='../../images/myImg/comments.png'></image>
+          <!-- <label>2018-07-25 10:14:23</label>
+          <button bindtap='delete'>删除</button> -->
+          <view style="float:right;">
+            <image bindtap='discuss'  data-bindex='{{bindex}}' class="comments" src='../../images/myImg/comments.png'></image>
           <image data-isShow='{{isShow}}' bindtap='TouchDiscuss' src='../../images/myImg/zhuanfa.png'></image>
+          </view>
         </view>
-
-        <!-- 点赞 -->
-        <view class='zan-view g-main'>
-          <!-- <view class='trigon-view'>
-            <image mode='aspectFill' class='trigon' src='/images/trigon.png'></image>
-          </view> -->
-
           <!-- 点赞 -->
-          <!-- <view class='zan-bg-view'>
-            <view class='zan-user-view' wx:for='{{zanSource}}' wx:key="{{index}}">
-              <label bindtap='TouchZanUser' data-name='{{item}}' class='zan-user'>{{item}},</label>
+          <text class="discuss_btn">评价</text>
+          <view class='zan-view g-main'>
+            <view class='zan-bg-view'>
+                <!-- <image class="zan_icon" src="../../images/zan_icon.png"></image>
+                <label bindtap='TouchZanUser' wx:for='{{item.zanSource}}' wx:key="{{index}}" data-name='{{item}}' class='zan-user'>{{item}},</label> -->
             </view>
-          </view> -->
-          <view class='line'></view>
-          <!-- 评论 -->
-          <view class='discuss-view'>
-            <view class='discuss' wx:for='{{contnet}}' wx:key="{{index}}">
-              <label bindtap='TouchZanUser' data-name='{{item.firstname}}' class='discuss-user'>{{item.firstname}}：</label>
-              <label class='content'>{{item.content}}</label>
+            <!-- <view class='line'></view> -->
+            <!-- 评论 -->
+            <view class='discuss-view'>
+              <view class='discuss' wx:for='{{item.contnet}}' wx:key="{{index}}">
+                <label bindtap='TouchZanUser' data-name='{{item.firstname}}' class='discuss-user'>{{item.firstname}}：</label>
+                <label class='content'>{{item.content}}</label>
+              </view>
             </view>
           </view>
         </view>
       </view>
-
-    </view>
   </view>
         </swiper-item>
     </swiper>

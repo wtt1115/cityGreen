@@ -214,7 +214,7 @@ page {
   /* background: rebeccapurple; */
 }
 .right-view {
-  /* background: red; */
+ width:100%;
 }
 /* 头像 */
 .headPortrait {
@@ -278,7 +278,6 @@ page {
 /* 时间、删除、点赞评论 */
 .TDD-view {
   height: 60rpx;
-  display: flex;
   align-items: center;
   background: white;
 }
@@ -305,13 +304,12 @@ page {
   margin-right: 80rpx;
 }
 /* 点赞 */
+/* 点赞 */
 .zan-view {
-  background: white;
-  margin-bottom: 20rpx;
-  position: relative;
+  background: #f7f7f9;
+  margin-top: 40rpx;
 }
 .trigon-view {
-  /* height: 20rpx; */
   margin-bottom: -15rpx;
 }
 .trigon {
@@ -322,13 +320,21 @@ page {
   margin-left: 10rpx;
 }
 .zan-bg-view {
-  display: inline-block;
-  background: #f7f7f9;
-  margin-right: 20rpx;
-  margin-bottom: -11rpx;
+  /* padding:20rpx; */
   border-top-left-radius: 7rpx;
   border-top-right-radius: 7rpx;
   position: relative;
+}
+.zan-bg-view::before {
+  display: block;
+  position: absolute;
+  top: -40rpx;
+  left: 24rpx;
+  content: '';
+  width: 0;
+  height: 0;
+  border: 20rpx solid;
+  border-color: transparent transparent #f7f7f9;
 }
 .zan-user-view {
   display: flex;
@@ -339,36 +345,42 @@ page {
   align-content: center;
 }
 .zan-user {
+   margin-right:10rpx;
   font-size: 12px;
   line-height: 40rpx;
   height: 40rpx;
   color: #58678a;
 }
 .line {
-  width: 97%;
+  width: 100%;
   height: 1px;
   background: white;
 }
-/* 评论 */
 .discuss-view {
-  width: 100%;
-  padding: 20rpx;
-}
-.discuss-view::before {
-  display: block;
-  position: absolute;
-  top: -18rpx;
-  left: 40rpx;
-  content: '';
-  width: 0;
-  height: 0;
-  border: 20rpx solid;
-  border-color: transparent transparent #f7f7f9;
+  width:100%;
+  padding:20rpx;
 }
 .discuss {
   background: #f7f7f9;
   line-height: 50rpx;
 }
+.discuss label {
+  font-size: 12px;
+}
+.discuss-user {
+  color: #58678a;
+  margin-left: 10rpx;
+}
+.content {
+  margin-left: 10rpx;
+}
+
+.zan_icon{
+  width:24rpx;
+  height:21rpx;
+  margin-right:10rpx;
+}
+/* 评论 */
 .discuss label {
   font-size: 12px;
 }
@@ -391,36 +403,45 @@ page {
   margin-left: 30rpx;
   margin-right: 30rpx;
 }
-.input_box {
-  width: 100%;
-  border: 1px solid #ddd;
+.input_box{
+  width:100%;
+  border:1px solid #ddd;
   background: #fff;
-  padding: 20rpx 10px;
+  padding:20rpx 10px;
 }
-.send_btn {
-  float: right;
-  padding: 10rpx 40rpx;
-  border: 1px solid #ddd;
-  color: #ddd;
-  border-radius: 30rpx;
+.send_btn{
+  width:100rpx;
+  height:50rpx;
+  line-height:50rpx;
+  border:1px solid rgb(0,218,183);
+  color:rgb(0,218,183);
+  border-radius: 25rpx;
+  text-align: center;
+  margin-top:30rpx;
 }
-.inputs {
-  width: 100%;
-  padding: 20rpx;
+.inputs{
+  flex:1;
+  padding:0 10rpx;
+  margin:30rpx 0;
 }
-.hidenIuput {
-  position: fixed;
-  left: 0;
-  z-index: -100;
-  top: -200px;
+.hidenIuput{
+  position: absolute;
+  left:0;
+  z-index:-100;
+  top:-200px;
 }
-.showInput {
-  position: fixed;
-  z-index: 100;
-  top: 35%;
+.showInput{
+  position:fixed;
+  z-index:100;
+   /* top:240px;-20 */
 }
-.listTime {
-  margin-right: 100rpx;
-  font-size: 24rpx;
-  color: #494949;
+.sendcolor{
+  background: rgb(0,218,183);
+  color:#fff;
+}
+.discuss_btn{
+  font-size:28rpx;
+  line-height: 32rpx;
+  color:rgb(116,116,119);
+  margin-left:40rpx;
 }
